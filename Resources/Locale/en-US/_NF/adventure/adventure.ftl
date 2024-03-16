@@ -5,18 +5,18 @@ adventure-mode-profit-text = made a total profit of: {" "}
 adventure-mode-loss-text = lost a total of: {" "}
 adventure-list-high = Today's Top Earners:
 adventure-list-low = Today's Biggest Spenders:
-adventure-title = New Frontier Adventure Mode
+adventure-title = Pax Astralis Adventure Mode
 adventure-description = Join a ship crew or buy your own and explore, research, salvage, or haul your way to riches!
 currency = Spesos
 
-guide-entry-adventure = New Frontiers Program
+guide-entry-adventure = Pax Astralis Program
 guide-entry-bank = NT Galactic Bank
 guide-entry-shipyard = Pax astralis Shipyards
 
 shipyard-rules-default1 =
     Thank you for your interest in Nanotrasen Security Forces.
     By purchasing a Security vessel, you agree to enforce Space Law
-    as found at https://github.com/gry-man/Pax-Documents/blob/main/spacelaw.md
+    as found at https://github.com/Pax-Astralis-Dev/Pax-Documents/blob/main/spacelaw.md
 shipyard-rules-default2 =
     Any actions performed by you or you crew that violate Space Law
     can and will result in administrative action.
