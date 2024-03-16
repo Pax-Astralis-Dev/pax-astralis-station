@@ -84,7 +84,17 @@
   copyright: "Victory by Koruu Chan. Rights reserved by Checkraze. Converted from WAV to OGG."
   source: "https://github.com/Cheackraze"
 
-  - files: ["HackerChillSynth.ogg"] #Pax Astralis custom music
+ - files: ["ChaosBringer.ogg"] #Pax Astralis custom music
   license: "CC-BY-NC-SA-3.0"
-  copyright: "Hacker - Chill synth by Karl Casey @ White Bat Audio. Converted from MP3 to OGG."
-  source: "https://karlcasey.bandcamp.com/"
+  copyright: "Chaos Bringer - By Rimworld makers. Converted from MP3 to OGG."
+  source: "Rimworld"
+
+ - files: ["DebrisBattle.ogg"] #Pax Astralis custom music
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Debris Battle - By FTL makers. Converted from MP3 to OGG."
+  source: "FTL game"
+
+ - files: ["RidingOut.ogg"] #Pax Astralis custom music
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Riding Out - By Rimworld makers. Converted from MP3 to OGG."
+  source: "Rimworld"
