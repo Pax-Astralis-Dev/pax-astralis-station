@@ -20,6 +20,7 @@
             Passenger: [ -1, -1 ]
             HeadOfPersonnel: [ 1, 1 ]
             HeadOfSecurity: [ 1, 1 ]
+            Shinobi: [ 1, 1 ]
             SeniorOfficer: [ 1, 1 ]
             Brigmedic: [ 1, 1 ]
             SecurityOfficer: [ 1, 1 ]

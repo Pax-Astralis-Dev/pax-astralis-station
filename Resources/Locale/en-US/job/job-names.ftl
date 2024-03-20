@@ -48,7 +48,7 @@ job-name-senior-engineer = Senior Engineer
 job-name-senior-researcher = Senior Researcher
 job-name-senior-physician = Senior Physician
 job-name-senior-officer = Security Lieutenant NS-4
-
+job-name-shinobi = Sector Shinobi
 # Role timers - Make these alphabetical or I cut you
 JobAtmosphericTechnician = Atmospheric Technician
 JobBartender = Bartender
@@ -100,3 +100,4 @@ JobStationEngineer = Station Engineer
 JobTechnicalAssistant = Technical Assistant
 JobWarden = Bailiff
 JobZookeeper = Zookeeper
+JobShinobi = Shinobi

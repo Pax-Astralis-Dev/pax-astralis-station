@@ -13,3 +13,4 @@ job-supervisors-security = NS-2 and higher
 job-supervisors-science = scientists, the senior researcher, and the research director
 job-supervisors-hire = whoever hires you
 job-supervisors-everyone = absolutely everyone
+job-supervisors-shinobi = sector commander and sector administrator

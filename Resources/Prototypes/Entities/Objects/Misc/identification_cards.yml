@@ -335,6 +335,18 @@
 
 - type: entity
   parent: IDCardStandard
+  id: ShinobiIDCard
+  name: shinobi ID card
+  components:
+    - type: Sprite
+      layers:
+        - state: default
+        - state: idshinobi
+    - type: PresetIdCard
+      job: Shinobi
+
+- type: entity
+  parent: IDCardStandard
   id: LibrarianIDCard
   name: librarian ID card
   components:

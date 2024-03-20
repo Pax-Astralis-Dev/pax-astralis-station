@@ -458,6 +458,27 @@
 
 - type: entity
   parent: BasePDA
+  id: ShinobiPDA
+  name: shinobi PDA
+  description: Looks like brand new, issued by the sector command.
+  components:
+  - type: Pda
+    id: ShinobiIDCard
+    state: pda-security
+    penSlot:
+      startingItem: PenHop
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#789876"
+    accentHColor: "#447987"
+  - type: Icon
+    state: pda-security
+
+- type: entity
+  parent: BasePDA
   id: CEPDA
   name: chief engineer PDA
   description: Looks like it's barely been used.

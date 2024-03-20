@@ -1,0 +1,78 @@
+- type: job
+  id: Shinobi
+  name: job-name-shinobi
+  description: job-description-shinobi
+  playTimeTracker: Shinobi
+  requirements:
+  #  - !type:OverallPlaytimeRequirement
+   #   time: 360 # Frontier
+    - !type:WhitelistRequirement
+  weight: 20
+  startingGear: ShinobiGear
+  icon: "JobIconHeadOfPersonnel"
+  requireAdminNotify: true
+  supervisors: job-supervisors-shinobi # Frontier
+  canBeAntag: false
+  access:
+  - Command
+  - HeadOfPersonnel
+  - Bar
+  - Service
+  - Frontier
+  - Maintenance
+  - Janitor
+  - Theatre
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - External
+  # I mean they'll give themselves the rest of the access levels *anyways*.
+  # As of 15/03/23 they can't do that so here's MOST of the rest of the access levels.
+  # Head level access that isn't their own was deliberately left out, get AA from the captain instead.
+  - Chemistry # Frontier
+  - Engineering # Frontier
+  - Quartermaster # Frontier
+  - Research # Frontier
+  - Detective # Frontier
+  - Salvage # Frontier
+  - Security # Frontier
+  - Brig # Frontier
+  - Cargo # Frontier
+  - Atmospherics # Frontier
+  - Medical # Frontier
+  - EmergencyShuttleRepealAll # Frontier
+  - Captain # Frontier
+  - ChiefEngineer # Frontier
+  - ChiefMedicalOfficer # Frontier
+#  - HeadOfSecurity # Frontier - Whitelist for sheriff only.
+  - ResearchDirector # Frontier
+  - Armory # Frontier
+  - Mercenary # Frontier
+  - Pilot # Frontier
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ] # Frontier - Added TrackingImplant
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: ShinobiGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNinja
+    back: ClothingBackpackSatchelSecurity
+    shoes: ClothingShoesSpaceNinja
+    head: ClothingHeadHelmetSpaceNinja
+    mask: ClothingMaskNinja
+    id: ShinobiPDA
+    ears: ClothingHeadsetAltCentCom
+    eyes: ClothingEyesVisorNinja
+    belt: EnergyKatana # Pax :3
+    neck: ClothingNeckCloakNanotrasen
+    hands: ClothingHandsGlovesSpaceNinja
+    outerClothing: ClothingOuterSuitSpaceNinja # Pax Astralis :3
+    pocket1: ThrowingStarNinja
+    pocket2: SpiderCharge
+  innerClothingSkirt: ClothingUniformJumpskirtHoP
+  satchel: ClothingBackpackSatchelSecurity
+  duffelbag: ClothingBackpackDuffelSecurity
