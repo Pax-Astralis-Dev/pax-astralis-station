@@ -9,7 +9,7 @@
     - !type:WhitelistRequirement
   weight: 20
   startingGear: ShinobiGear
-  icon: "JobIconHeadOfPersonnel"
+  icon: "JobIconQuarterMaster"
   requireAdminNotify: true
   supervisors: job-supervisors-shinobi # Frontier
   canBeAntag: false
