@@ -544,6 +544,18 @@
       - state: green
       - state: brigmedic
 
+- type: entity
+  id: SpawnPointSectorShinobi
+  parent: SpawnPointJobBase
+  name: sectorshinobi
+  components:
+  - type: SpawnPoint
+    job_id: SectorShinobi
+  - type: Sprite
+    layers:
+      - state: green
+      - state: sectorshinobi
+
 # SPECIAL
 # ERT
 - type: entity

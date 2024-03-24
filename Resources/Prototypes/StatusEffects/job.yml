@@ -367,3 +367,10 @@
   icon:
     sprite: Interface/Misc/job_icons.rsi
     state: SeniorResearcher
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconSectorShinobi
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: SectorShinobi

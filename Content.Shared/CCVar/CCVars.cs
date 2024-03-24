@@ -106,7 +106,7 @@ namespace Content.Shared.CCVar
         ///     Controls if the game should run station events
         /// </summary>
         public static readonly CVarDef<bool>
-            EventsEnabled = CVarDef.Create("events.enabled", true, CVar.ARCHIVE | CVar.SERVERONLY);
+            EventsEnabled = CVarDef.Create("events.enabled", false, CVar.ARCHIVE | CVar.SERVERONLY);
 
         /// <summary>
         ///     Average time (in minutes) for when the ramping event scheduler should stop increasing the chaos modifier.
@@ -240,7 +240,7 @@ namespace Content.Shared.CCVar
             CVarDef.Create("game.diagonalmovement", true, CVar.ARCHIVE);
 
         public static readonly CVarDef<int> SoftMaxPlayers =
-            CVarDef.Create("game.soft_max_players", 30, CVar.SERVERONLY | CVar.ARCHIVE);
+            CVarDef.Create("game.soft_max_players", 101, CVar.SERVERONLY | CVar.ARCHIVE);
 
         /// <summary>
         /// Whether or not panic bunker is currently enabled.
