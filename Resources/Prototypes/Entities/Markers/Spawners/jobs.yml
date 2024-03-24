@@ -554,7 +554,7 @@
   - type: Sprite
     layers:
       - state: green
-      - state: sectorshinobi
+      - state: SectorShinobi
 
 # SPECIAL
 # ERT
