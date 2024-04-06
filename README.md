@@ -6,7 +6,7 @@ If you want to host or create content for SS14, this is the repo you need. It co
 
 ## Links
 
-[Website](https://spacestation14.io/) | [SS14 Discord](https://discord.ss14.io/) | [Forum](https://forum.spacestation14.io/) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone Download](https://spacestation14.io/about/nightlies/)
+[Pax Wiki](wiki/Readme.md) | [Website](https://spacestation14.io/) | [SS14 Discord](https://discord.ss14.io/) | [Forum](https://forum.spacestation14.io/) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone Download](https://spacestation14.io/about/nightlies/)
 
 ## Documentation/Wiki
 
