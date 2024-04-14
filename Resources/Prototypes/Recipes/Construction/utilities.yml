@@ -446,7 +446,24 @@
   conditions:
     - !type:TileNotBlocked {}
     - !type:NoUnstackableInTile
-    
+
+- type: construction
+  name: tiny fan
+  description: A tiny fan, releasing a thin gust of air.
+  id: AtmosDeviceFanTiny
+  graph: GasUnary
+  startNode: start
+  targetNode: tinyfan
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/Atmospherics/tinyfan.rsi
+    state: icon
+  conditions:
+    - !type:TileNotBlocked {}
+    - !type:NoUnstackableInTile
+
 - type: construction
   name: passive vent
   description: Unpowered vent that equalises gases on both sides.
@@ -468,7 +485,7 @@
   conditions:
     - !type:TileNotBlocked {}
     - !type:NoUnstackableInTile
-    
+
 - type: construction
   name: air scrubber
   description: Sucks gas into connected pipes.
@@ -490,7 +507,7 @@
   conditions:
     - !type:TileNotBlocked {}
     - !type:NoUnstackableInTile
-    
+
 - type: construction
   name: air injector
   description: Injects air into the atmosphere.
@@ -512,7 +529,7 @@
   conditions:
     - !type:TileNotBlocked {}
     - !type:NoUnstackableInTile
-    
+
 # ATMOS BINARY
 - type: construction
   name: gas pump

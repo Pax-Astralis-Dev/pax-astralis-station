@@ -3198,3 +3198,9 @@ Entries:
       message: Added Oreo Station. It is a front-line border defense station with heavy emphasis on security.
   id: 4803
   time: '2024-03-24T18:13:54.0000000+00:00'
+- author: Gry
+  changes:
+    - type: Add
+      message: Added shuttle guns. Circuitboard vendors sell circuits to make shuttle guns, and security ship Prowler is the only one which comes with shuttle guns for better space safety of Paxians!
+  id: 4803
+  time: '2024-04-14T18:15:54.0000000+00:00'

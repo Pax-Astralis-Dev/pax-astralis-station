@@ -27,6 +27,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
+using System.Numerics;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
@@ -213,7 +214,25 @@ public abstract partial class SharedGunSystem : EntitySystem
         AttemptShoot(user, gunUid, gun);
         gun.ShotCounter = 0;
     }
+ /// <summary>
 
+    /// Shoots by assuming the gun is the user at default coordinates.
+
+    /// </summary>
+
+    public void AttemptShoot(EntityUid gunUid, GunComponent gun)
+
+    {
+
+        var coordinates = new EntityCoordinates(gunUid, new Vector2(0, -1));
+
+        gun.ShootCoordinates = coordinates;
+
+        AttemptShoot(gunUid, gunUid, gun);
+
+        gun.ShotCounter = 0;
+
+    }
     private void AttemptShoot(EntityUid user, EntityUid gunUid, GunComponent gun)
     {
         if (gun.FireRate <= 0f ||
