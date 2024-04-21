@@ -187,8 +187,7 @@ public sealed partial class CargoSystem
                 {
                     // We won't be able to fit the whole order on, so make one
                     // which represents the space we do have left:
-                    var reducedOrder = new CargoOrderData(order.OrderId,
-                            order.ProductId, order.Price, spaceRemaining, order.Requester, order.Reason);
+                    var reducedOrder = new CargoOrderData(order.OrderId, order.ProductId, order.Price, spaceRemaining, order.Requester, order.Reason);
                     orders.Add(reducedOrder);
                 }
                 else
@@ -323,7 +322,7 @@ public sealed partial class CargoSystem
         while (pads.Count > 0)
         {
             var coordinates = new EntityCoordinates(shuttleUid, xformQuery.GetComponent(_random.PickAndTake(pads).Entity).LocalPosition);
-            if (!FulfillOrder(orderDatabase, coordinates, shuttle.PrinterOutput))
+            if (!FulfillOrder(orderDatabase, coordinates, shuttle.PrinterOutput, shuttleUid))
             {
                 break;
             }

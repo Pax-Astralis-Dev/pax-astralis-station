@@ -24,6 +24,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using System.Linq;
+using Content.Shared.DeviceLinking;
 
 namespace Content.Server.Cargo.Systems
 {
@@ -203,7 +204,7 @@ namespace Content.Server.Cargo.Systems
                 return;
             }
 
-            var data = GetOrderData(args, product, GenerateOrderId(orderDatabase));
+            var data = GetOrderData(args, product, GenerateOrderId(orderDatabase), uid);
 
             if (!TryAddOrder(orderDatabase.Owner, data, orderDatabase))
             {
@@ -272,9 +273,9 @@ namespace Content.Server.Cargo.Systems
             _audio.PlayPvs(_audio.GetSound(component.ErrorSound), uid);
         }
 
-        private static CargoOrderData GetOrderData(CargoConsoleAddOrderMessage args, CargoProductPrototype cargoProduct, int id)
+        private static CargoOrderData GetOrderData(CargoConsoleAddOrderMessage args, CargoProductPrototype cargoProduct, int id, EntityUid uid)
         {
-            return new CargoOrderData(id, cargoProduct.Product, cargoProduct.PointCost, args.Amount, args.Requester, args.Reason);
+            return new CargoOrderData(id, cargoProduct.Product, cargoProduct.PointCost, args.Amount, args.Requester, args.Reason, uid.Id);
         }
 
         public static int GetOutstandingOrderCount(StationCargoOrderDatabaseComponent component)
@@ -390,6 +391,18 @@ namespace Content.Server.Cargo.Systems
             component.Orders.Clear();
             Dirty(component);
         }
+        private static bool PeekFrontOrder(StationCargoOrderDatabaseComponent orderDB, [NotNullWhen(true)] out CargoOrderData? orderOut)
+        {
+            var orderIdx = orderDB.Orders.FindIndex(order => order.Approved);
+            if (orderIdx == -1)
+            {
+                orderOut = null;
+                return false;
+            }
+
+            orderOut = orderDB.Orders[orderIdx];
+            return true;
+        }
 
         private static bool PopFrontOrder(StationCargoOrderDatabaseComponent orderDB, [NotNullWhen(true)] out CargoOrderData? orderOut)
         {
@@ -411,9 +424,20 @@ namespace Content.Server.Cargo.Systems
             return true;
         }
 
-        private bool FulfillOrder(StationCargoOrderDatabaseComponent orderDB, EntityCoordinates whereToPutIt,
-                string? paperPrototypeToPrint)
+        private bool FulfillOrder(StationCargoOrderDatabaseComponent orderDB, EntityCoordinates whereToPutIt, string? paperPrototypeToPrint, EntityUid uid)
         {
+
+            if (PeekFrontOrder(orderDB, out var peekOrder))
+            {
+                if (peekOrder.Console != EntityUid.Invalid.Id)
+                {
+                    if ( TryComp<DeviceLinkSinkComponent>(uid, out var sink) && sink.LinkedSources.FirstOrNull() is {} console && console.Id != peekOrder.Console)
+                    {
+                        return false;
+                    }
+                }
+            }
+
             if (PopFrontOrder(orderDB, out var order))
             {
                 // Create the item itself
