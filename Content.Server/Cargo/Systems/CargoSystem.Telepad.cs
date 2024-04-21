@@ -63,8 +63,7 @@ public sealed partial class CargoSystem
 
             if (station == null) return;
 
-            if (!TryComp<StationCargoOrderDatabaseComponent>(station, out var orderDatabase) ||
-                orderDatabase.Orders.Count == 0)
+            if (!TryComp<StationCargoOrderDatabaseComponent>(station, out var orderDatabase) || orderDatabase.Orders.Count == 0)
             {
                 if (!TryComp<StationCargoOrderDatabaseComponent>(_station.GetOwningStation((EntityUid) station), out var gridDatabase) ||
                     gridDatabase.Orders.Count == 0)
@@ -75,7 +74,7 @@ public sealed partial class CargoSystem
                 orderDatabase = gridDatabase;
             }
 
-            if (FulfillOrder(orderDatabase, xform.Coordinates, comp.PrinterOutput))
+            if (FulfillOrder(orderDatabase, xform.Coordinates, comp.PrinterOutput, uid))
             {
                 _audio.PlayPvs(_audio.GetSound(comp.TeleportSound), uid, AudioParams.Default.WithVolume(-8f));
                 UpdateOrders(orderDatabase);

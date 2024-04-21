@@ -32,6 +32,11 @@ namespace Content.Shared.Cargo
         /// </summary>
         public int NumDispatched = 0;
 
+        /// <summary>
+        /// The Console which requested the Order
+        /// </summary>
+        public int Console = 0;
+
         public readonly string Requester;
         // public String RequesterRank; // TODO Figure out how to get Character ID card data
         // public int RequesterId;
@@ -39,7 +44,7 @@ namespace Content.Shared.Cargo
         public  bool Approved => Approver is not null;
         public string? Approver;
 
-        public CargoOrderData(int orderId, string productId, int price, int amount, string requester, string reason)
+        public CargoOrderData(int orderId, string productId, int price, int amount, string requester, string reason, int consoleUid = 0)
         {
             OrderId = orderId;
             ProductId = productId;
@@ -47,6 +52,7 @@ namespace Content.Shared.Cargo
             OrderQuantity = amount;
             Requester = requester;
             Reason = reason;
+            Console = consoleUid;
         }
 
         public void SetApproverData(string? fullName, string? jobTitle)
