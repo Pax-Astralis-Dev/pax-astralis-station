@@ -3202,5 +3202,13 @@ Entries:
   changes:
     - type: Add
       message: Added shuttle guns. Circuitboard vendors sell circuits to make shuttle guns, and security ship Prowler is the only one which comes with shuttle guns for better space safety of Paxians!
-  id: 4803
+  id: 4804
   time: '2024-04-14T18:15:54.0000000+00:00'
+- author: Gry
+  changes:
+  - type: Add
+    message: Remodeled oreo to have two cargo request sections in outer ring
+  - type: Add
+    message: Added feature to have split cargo requests base on links
+  id: 4805
+  time: '2024-04-21T16:43:54.0000000+00:00'
