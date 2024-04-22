@@ -22,7 +22,6 @@
     requiredLegs: 2
   - type: VulpLanguageSpeaker
   - type: VulpLangaugeListener
-  - type: VulpGiveTranslator
   - type: SizeAttributeWhitelist
     short: true
     shortscale: 0.8
