@@ -1,18 +1,15 @@
 - type: gameMap
-  id: Oreo1
-  mapName: 'Pax Oreo Border Station'
-  mapPath: /Maps/_NF/Outpost/oreo-1.yml
+  id: Pancake
+  mapName: 'Pax Pancake Border Station'
+  mapPath: /Maps/_NF/Outpost/oreo.yml
   minPlayers: 0
   maxPlayers: 100
   stations:
-    Oreo:
+    Pancake:
       stationProto: StandardFrontierStation
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Pax Oreo Border Station'
-      #          nameGenerator:
-      #            !type:NanotrasenNameGenerator
-      #            prefixCreator: '14'
+        mapNameTemplate: 'Pax Pancake Border Station'
       - type: StationJobs
         overflowJobs:
         - Passenger

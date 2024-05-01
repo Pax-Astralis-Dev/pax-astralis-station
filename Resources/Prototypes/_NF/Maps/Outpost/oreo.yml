@@ -8,16 +8,13 @@
     Oreo:
       stationProto: StandardFrontierStation
       components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Pax Oreo Border Station'
-#          nameGenerator:
-#            !type:NanotrasenNameGenerator
-#            prefixCreator: '14'
-        - type: StationJobs
-          overflowJobs:
-            - Passenger
-          availableJobs:
-            Passenger: [ -1, -1 ]
-            HeadOfPersonnel: [ 1, 1 ]
-            HeadOfSecurity: [ 1, 1 ]
-            Shinobi: [ 1, 1 ]
+      - type: StationNameSetup
+        mapNameTemplate: 'Pax Oreo Border Station'
+      - type: StationJobs
+        overflowJobs:
+        - Passenger
+        availableJobs:
+          Passenger: [ -1, -1 ]
+          HeadOfPersonnel: [ 1, 1 ]
+          HeadOfSecurity: [ 1, 1 ]
+          Shinobi: [ 1, 1 ]
