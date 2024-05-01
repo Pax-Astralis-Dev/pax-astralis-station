@@ -1,7 +1,7 @@
 ﻿[game]
 # Straight in-game baby
 lobbyenabled = false
-map = "Frontier"
+map = "Oreo"
 role_timers = false
 
 [physics]
