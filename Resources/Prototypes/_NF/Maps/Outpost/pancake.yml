@@ -1,7 +1,7 @@
 - type: gameMap
   id: Pancake
   mapName: 'Pax Pancake Border Station'
-  mapPath: /Maps/_NF/Outpost/oreo.yml
+  mapPath: /Maps/_NF/Outpost/pancake.yml
   minPlayers: 0
   maxPlayers: 100
   stations:

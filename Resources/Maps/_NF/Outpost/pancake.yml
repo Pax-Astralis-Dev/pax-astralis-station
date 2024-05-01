@@ -498,11 +498,6 @@ entities:
             220: 65,16
             291: 90,-6
         - node:
-            color: '#334E6DC8'
-            id: BrickTileWhiteInnerSw
-          decals:
-            250: 94,16
-        - node:
             color: '#DE3A3A96'
             id: BrickTileWhiteInnerSw
           decals:
@@ -700,8 +695,6 @@ entities:
             245: 90,16
             246: 91,16
             247: 91,16
-            248: 92,16
-            249: 93,16
             283: 91,-6
             305: 82,-8
             306: 83,-8
@@ -845,74 +838,81 @@ entities:
             5: 83.09377,-22.033775
         - node:
             color: '#FFFFFFFF'
-            id: OriginStationSign1
+            id: SpaceStationSign1
           decals:
-            85: 85,17
+            487: 81,19
+            498: 84,-10
+            509: 94,-24
         - node:
             color: '#FFFFFFFF'
-            id: OriginStationSign10
+            id: SpaceStationSign10
           decals:
-            75: 94,18
+            489: 82,17
+            507: 85,-12
+            517: 95,-26
         - node:
             color: '#FFFFFFFF'
-            id: OriginStationSign11
+            id: SpaceStationSign11
           decals:
-            76: 92,16
+            490: 83,17
+            508: 86,-12
+            518: 96,-26
         - node:
             color: '#FFFFFFFF'
-            id: OriginStationSign12
+            id: SpaceStationSign2
           decals:
-            77: 93,16
+            488: 82,19
+            499: 85,-10
+            510: 95,-24
         - node:
             color: '#FFFFFFFF'
-            id: OriginStationSign13
+            id: SpaceStationSign3
           decals:
-            78: 94,16
+            506: 82,-11
+            513: 92,-25
         - node:
             color: '#FFFFFFFF'
-            id: OriginStationSign2
+            id: SpaceStationSign4
           decals:
-            73: 91,17
-            74: 90,17
-            81: 89,17
-            82: 88,17
-            83: 87,17
-            84: 86,17
+            496: 80,18
+            497: 79,18
+            505: 83,-11
+            512: 93,-25
         - node:
             color: '#FFFFFFFF'
-            id: OriginStationSign3
+            id: SpaceStationSign5
           decals:
-            72: 92,17
+            491: 81,18
+            500: 84,-11
+            511: 94,-25
         - node:
             color: '#FFFFFFFF'
-            id: OriginStationSign4
+            id: SpaceStationSign6
           decals:
-            71: 93,17
+            492: 82,18
+            501: 85,-11
+            514: 95,-25
         - node:
             color: '#FFFFFFFF'
-            id: OriginStationSign5
+            id: SpaceStationSign7
           decals:
-            70: 94,17
+            493: 83,18
+            502: 86,-11
+            515: 96,-25
         - node:
             color: '#FFFFFFFF'
-            id: OriginStationSign6
+            id: SpaceStationSign8
           decals:
-            69: 95,17
+            494: 84,18
+            503: 87,-11
+            516: 97,-25
         - node:
             color: '#FFFFFFFF'
-            id: OriginStationSign7
+            id: SpaceStationSign9
           decals:
-            68: 96,17
-        - node:
-            color: '#FFFFFFFF'
-            id: OriginStationSign8
-          decals:
-            80: 92,18
-        - node:
-            color: '#FFFFFFFF'
-            id: OriginStationSign9
-          decals:
-            79: 93,18
+            495: 85,18
+            504: 88,-11
+            519: 98,-25
         - node:
             angle: 3.141592653589793 rad
             color: '#FFFFFFFF'
@@ -2366,8 +2366,6 @@ entities:
       - 6173
       - 6080
       - 6072
-      - 5972
-      - 5340
       - 6242
       - 6241
       - 6240
@@ -2382,8 +2380,6 @@ entities:
       - 6173
       - 6080
       - 6072
-      - 5972
-      - 5340
       - 6242
       - 6241
       - 6240
@@ -2421,8 +2417,6 @@ entities:
       - 6173
       - 6080
       - 6072
-      - 5972
-      - 5340
       - 6242
       - 6241
       - 6240
@@ -3652,6 +3646,12 @@ entities:
     - pos: 89.5,-28.5
       parent: 2
       type: Transform
+  - uid: 5340
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 98.5,-24.5
+      parent: 2
+      type: Transform
   - uid: 5385
     components:
     - pos: 62.5,37.5
@@ -3661,12 +3661,6 @@ entities:
     components:
     - rot: 1.5707963267948966 rad
       pos: 98.5,-23.5
-      parent: 2
-      type: Transform
-  - uid: 6099
-    components:
-    - rot: 1.5707963267948966 rad
-      pos: 98.5,-24.5
       parent: 2
       type: Transform
   - uid: 6100
@@ -30569,6 +30563,11 @@ entities:
       type: Transform
     - color: '#FF0000FF'
       type: AtmosPipeColor
+  - uid: 5973
+    components:
+    - pos: 81.5,18.5
+      parent: 2
+      type: Transform
   - uid: 5974
     components:
     - rot: 1.5707963267948966 rad
@@ -30856,6 +30855,11 @@ entities:
     components:
     - rot: 3.141592653589793 rad
       pos: 77.5,26.5
+      parent: 2
+      type: Transform
+  - uid: 6099
+    components:
+    - pos: 81.5,17.5
       parent: 2
       type: Transform
   - uid: 6165
@@ -31606,14 +31610,11 @@ entities:
       type: Transform
     - color: '#FF0000FF'
       type: AtmosPipeColor
-  - uid: 5973
+  - uid: 5972
     components:
-    - rot: 3.141592653589793 rad
-      pos: 80.5,17.5
+    - pos: 80.5,17.5
       parent: 2
       type: Transform
-    - color: '#0000FFFF'
-      type: AtmosPipeColor
   - uid: 6004
     components:
     - rot: 1.5707963267948966 rad
@@ -32159,16 +32160,6 @@ entities:
       type: Transform
     - color: '#0000FFFF'
       type: AtmosPipeColor
-  - uid: 5340
-    components:
-    - pos: 80.5,18.5
-      parent: 2
-      type: Transform
-    - ShutdownSubscribers:
-      - 6243
-      type: DeviceNetwork
-    - color: '#0000FFFF'
-      type: AtmosPipeColor
   - uid: 6198
     components:
     - rot: 3.141592653589793 rad
@@ -32181,6 +32172,12 @@ entities:
     components:
     - rot: 1.5707963267948966 rad
       pos: 81.5,29.5
+      parent: 2
+      type: Transform
+  - uid: 7360
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 80.5,16.5
       parent: 2
       type: Transform
 - proto: GasVentScrubber
@@ -32533,17 +32530,6 @@ entities:
       type: Transform
     - color: '#FF0000FF'
       type: AtmosPipeColor
-  - uid: 5972
-    components:
-    - rot: 3.141592653589793 rad
-      pos: 81.5,18.5
-      parent: 2
-      type: Transform
-    - ShutdownSubscribers:
-      - 6243
-      type: DeviceNetwork
-    - color: '#FF0000FF'
-      type: AtmosPipeColor
   - uid: 6005
     components:
     - rot: -1.5707963267948966 rad
@@ -32557,6 +32543,12 @@ entities:
       type: DeviceNetwork
     - color: '#FF0000FF'
       type: AtmosPipeColor
+  - uid: 7359
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 81.5,16.5
+      parent: 2
+      type: Transform
 - proto: GeneratorRTG
   entities:
   - uid: 2040
@@ -36992,7 +36984,7 @@ entities:
       pos: 96.5,34.5
       parent: 2
       type: Transform
-    - nextDrop: 2801.9317826
+    - nextDrop: 4363.5289263
       type: DeadDrop
 - proto: PosterContrabandHighEffectEngineeringDD
   entities:
@@ -37002,7 +36994,7 @@ entities:
       pos: 63.5,29.5
       parent: 2
       type: Transform
-    - nextDrop: 5313.9317826
+    - nextDrop: 4929.5289263
       type: DeadDrop
 - proto: PosterContrabandNuclearDeviceInformational
   entities:
