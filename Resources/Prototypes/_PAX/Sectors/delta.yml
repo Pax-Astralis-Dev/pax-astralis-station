@@ -1,0 +1,4 @@
+- type: sector
+  id: Delta
+  name: 'Delta Sector'
+  stations:

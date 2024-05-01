@@ -1,0 +1,4 @@
+- type: sector
+  id: Beta
+  name: 'Beta Sector'
+  stations:

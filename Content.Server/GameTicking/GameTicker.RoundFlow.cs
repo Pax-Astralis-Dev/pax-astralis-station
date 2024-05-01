@@ -75,6 +75,44 @@ namespace Content.Server.GameTicking
                    _roundStartTime - RoundPreloadTime > _gameTiming.CurTime;
         }
 
+        private void PreLoadSectors()
+        {
+            if (_gameSectorManager.GetSectorMapIds().Count > 0)
+                return;
+            var sectors = _gameSectorManager.AllSectors();
+            foreach (var sector in sectors)
+            {
+                var sectorMap = _mapManager.CreateMap();
+                _gameSectorManager.AddSector(sector.ID, sectorMap);
+                _mapManager.AddUninitializedMap(sectorMap);
+
+                var mainStationMap = _gameMapManager.GetSelectedMap();
+                if (mainStationMap == null)
+                {
+                    // otherwise set the map using the config rules
+                    _gameMapManager.SelectMapByConfigRules();
+                    mainStationMap = _gameMapManager.GetSelectedMap();
+                }
+
+                // Small chance the above could return no map.
+                // ideally SelectMapByConfigRules will always find a valid map
+                if (mainStationMap == null)
+                    throw new Exception("invalid config; couldn't select a valid station map!");
+
+                LoadGameMap(mainStationMap, sectorMap, null);
+            }
+
+            DefaultMap = _gameSectorManager.GetSectorMapIds().First();
+        }
+        private void LoadSectors()
+        {
+            var sectors = _gameSectorManager.GetSectorMapIds();
+            foreach (var mapId in sectors)
+            {
+                _mapManager.DoMapInitialize(mapId);
+            }
+        }
+
         /// <summary>
         ///     Loads all the maps for the given round.
         /// </summary>
@@ -105,14 +143,11 @@ namespace Content.Server.GameTicking
 
             // Small chance the above could return no map.
             // ideally SelectMapByConfigRules will always find a valid map
-            if (mainStationMap != null)
-            {
-                maps.Add(mainStationMap);
-            }
-            else
-            {
+            if (mainStationMap == null)
                 throw new Exception("invalid config; couldn't select a valid station map!");
-            }
+
+            maps.Add(mainStationMap);
+
 
             if (CurrentPreset?.MapPool != null &&
                 _prototypeManager.TryIndex<GameMapPoolPrototype>(CurrentPreset.MapPool, out var pool) &&
@@ -192,7 +227,7 @@ namespace Content.Server.GameTicking
             SendServerMessage(Loc.GetString("game-ticker-start-round"));
 
             // Just in case it hasn't been loaded previously we'll try loading it.
-            LoadMaps();
+            PreLoadSectors();
 
             // map has been selected so update the lobby info text
             // applies to players who didn't ready up
@@ -238,7 +273,7 @@ namespace Content.Server.GameTicking
                 return;
 
             // MapInitialize *before* spawning players, our codebase is too shit to do it afterwards...
-            _mapManager.DoMapInitialize(DefaultMap);
+            LoadSectors();
 
             SpawnPlayers(readyPlayers, readyPlayerProfiles, force);
 
@@ -587,7 +622,7 @@ namespace Content.Server.GameTicking
             // Preload maps so we can start faster
             else if (_roundStartTime - RoundPreloadTime < _gameTiming.CurTime)
             {
-                LoadMaps();
+                PreLoadSectors();
             }
         }
 

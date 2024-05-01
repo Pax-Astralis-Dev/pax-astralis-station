@@ -1,0 +1,5 @@
+- type: sector
+  id: Alpha
+  name: 'Alpha Sector'
+  stations:
+
