@@ -3212,3 +3212,11 @@ Entries:
     message: Added feature to have split cargo requests base on links
   id: 4805
   time: '2024-04-21T16:43:54.0000000+00:00'
+- author: Barnacle14
+  changes:
+  - type: Add
+    message: Added blockhead, a shuttle with similar mechanics to Prospector, only a little bit larger and more expensive.
+  - type: Remove
+    message: Removed prospector shuttle.
+  id: 4806
+  time: '2024-05-03T23:03:00.0000000+00:00'
