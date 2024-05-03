@@ -118,6 +118,7 @@ public sealed class NfAdventureRuleSystem : GameRuleSystem<AdventureRuleComponen
         var arena = "/Maps/_NF/POI/arena.yml";
         var cove = "/Maps/_NF/POI/cove.yml";
         var courthouse = "/Maps/_NF/POI/courthouse.yml";
+        var valor = "/Maps/_NF/POI/valorpudding.yml";
         var lodge = "/Maps/_NF/POI/lodge.yml";
         var lab = "/Maps/_NF/POI/anomalouslab.yml";
         var church = "Maps/_NF/POI/beacon.yml";
@@ -217,20 +218,15 @@ public sealed class NfAdventureRuleSystem : GameRuleSystem<AdventureRuleComponen
             _shuttle.AddIFFFlag(depotUid6s[0], IFFFlags.HideLabel);
         }
 
-        if (_map.TryLoad(mapId, lodge, out var lodgeUids, new MapLoadOptions
-            {
-                Offset = _random.NextVector2(1650f, 3400f)
-            }))
-        {
-            if (_prototypeManager.TryIndex<GameMapPrototype>("Lodge", out var stationProto))
-            {
-                _station.InitializeNewStation(stationProto.Stations["Lodge"], lodgeUids);
-            }
-
-            var meta = EnsureComp<MetaDataComponent>(lodgeUids[0]);
-            _meta.SetEntityName(lodgeUids[0], "Expeditionary Lodge", meta);
-            _shuttle.SetIFFColor(lodgeUids[0], civilianColor);
-        }
+        //if (_map.TryLoad(mapId, valor, out var valorUids, new MapLoadOptions
+           // {
+            //    Offset = _random.NextVector2(1650f, 3400f)
+            //}))
+      //  {
+           // var meta = EnsureComp<MetaDataComponent>(valorUids[0]);
+           // _meta.SetEntityName(valorUids[0], "Valor Pudding Spaceport", meta);
+           // _shuttle.SetIFFColor(valorUids[0], civilianColor);
+       // }
 
         if (_map.TryLoad(mapId, caseys, out var caseyUids, new MapLoadOptions
             {
