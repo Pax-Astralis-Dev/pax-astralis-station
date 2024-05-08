@@ -10,7 +10,7 @@
       r: 1
       g: 2
       b: 3
-    stationId: Frontier
+    stationId: Oreo
     stationName: Pax Oreo Border Station
   outposts:
    - type: sectorOutpost

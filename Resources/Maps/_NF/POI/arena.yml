@@ -26,6 +26,7 @@ entities:
   - uid: 2
     components:
     - type: MetaData
+      name: The Pit
     - pos: 0.10035038,0.17291927
       parent: invalid
       type: Transform
@@ -137,6 +138,10 @@ entities:
     - type: Shuttle
       angularDamping: 999999
       linearDamping: 999999
+    - type: IFF
+      color: "#3737C8"
+    - id: arena
+      type: BecomesStation
     - type: GridPathfinding
     - gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
