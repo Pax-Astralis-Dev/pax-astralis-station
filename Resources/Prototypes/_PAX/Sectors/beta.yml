@@ -1,4 +1,71 @@
 - type: sector
   id: Beta
-  name: 'Beta Sector'
-  stations:
+  name: Beta
+  station:
+    type: sectorStation
+    id: 1
+    location:
+      distance: 0
+    color:
+      r: 1
+      g: 2
+      b: 3
+    stationId: Oreo1
+    stationName: Pax Oreo Border Station
+  outposts:
+  - type: sectorOutpost
+    id: 2
+    location:
+      position:
+        x: 4500
+        y: 3500
+    color:
+      r: 1
+      g: 2
+      b: 3
+    path: /Maps/_NF/POI/cargodepot.yml
+  - type: sectorOutpost
+    id: 3
+    location:
+      distance: 3500
+    color:
+      r: 1
+      g: 2
+      b: 3
+    path: /Maps/_NF/POI/lpbravo.yml
+  - type: sectorOutpost
+    id: 4
+    location:
+      distance: 2500
+    color:
+      r: 1
+      g: 2
+      b: 3
+    path: /Maps/_NF/POI/arena.yml
+  - type: sectorOutpost
+    id: 6
+    location:
+      distance: 1000
+    color:
+      r: 1
+      g: 2
+      b: 3
+    path: /Maps/_NF/POI/cove.yml
+  - type: sectorOutpost
+    id: 7
+    location:
+      distance: 2000
+    color:
+      r: 1
+      g: 2
+      b: 3
+    path: Maps/_NF/POI/grifty.yml
+  - type: sectorOutpost
+    id: 5
+    location:
+      distance: 1500
+    color:
+      r: 1
+      g: 2
+      b: 3
+    path: /Maps/_NF/POI/anomalouslab.yml

@@ -1994,7 +1994,7 @@ entities:
       type: GridAtmosphere
     - type: GasTileOverlay
     - type: RadiationGridResistance
-    - id: Oreo
+    - id: Oreo1
       type: BecomesStation
     - type: StationTransit
     - type: IFF

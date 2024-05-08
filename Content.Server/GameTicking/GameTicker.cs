@@ -7,7 +7,6 @@ using Content.Server.Ghost;
 using Content.Server.Maps;
 using Content.Server.Players.PlayTimeTracking;
 using Content.Server.Preferences.Managers;
-using Content.Server.Sectors;
 using Content.Server.ServerUpdates;
 using Content.Server.Shuttles.Systems;
 using Content.Server.Station.Systems;
@@ -42,7 +41,6 @@ namespace Content.Server.GameTicking
         [Dependency] private readonly IConfigurationManager _configurationManager = default!;
         [Dependency] private readonly IConsoleHost _consoleHost = default!;
         [Dependency] private readonly IGameMapManager _gameMapManager = default!;
-        [Dependency] private readonly GameSectorManager _gameSectorManager = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
         [Dependency] private readonly ILogManager _logManager = default!;
         [Dependency] private readonly IMapManager _mapManager = default!;

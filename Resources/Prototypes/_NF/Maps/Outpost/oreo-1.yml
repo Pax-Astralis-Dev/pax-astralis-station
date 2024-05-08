@@ -5,7 +5,7 @@
   minPlayers: 0
   maxPlayers: 100
   stations:
-    Oreo:
+    Oreo1:
       stationProto: StandardFrontierStation
       components:
       - type: StationNameSetup
