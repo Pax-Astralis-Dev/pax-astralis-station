@@ -1,0 +1,11 @@
+- type: gameMap
+  id: Lodge
+  mapName: 'Valor Pudding Spaceport'
+  mapPath: /Maps/_NF/POI/lodge.yml
+  minPlayers: 0
+  stations:
+    Lodge:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Valorpudding Spaceport'
