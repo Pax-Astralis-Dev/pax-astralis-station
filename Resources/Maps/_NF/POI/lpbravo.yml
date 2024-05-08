@@ -15,6 +15,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
+      name: Listening Point Bravo
     - pos: 0.10000038,0.09999943
       parent: invalid
       type: Transform
@@ -51,6 +52,11 @@ entities:
     - type: Shuttle
       linearDamping: 999999
       angularDamping: 999999
+    - type: IFF
+      flags: HideLabel
+      color: "#C83737"
+    - id: lpbravo
+      type: BecomesStation
     - type: GridPathfinding
     - gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
