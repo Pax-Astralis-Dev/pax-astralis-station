@@ -21,7 +21,7 @@
     startDelay: 30
     duration: 35
     earliestStart: 90
-    minimumPlayers: 20
+    minimumPlayers: 1
   - type: BluespaceSyndicateCrateRule
 
 - type: entity
@@ -35,11 +35,11 @@
         path: /Audio/Announcements/attention.ogg
       endAnnouncement: station-event-bluespace-cache-end-announcement
       earliestStart: 100
-      minimumPlayers: 20
+      minimumPlayers: 1
       weight: 2
       startDelay: 10
-      duration: 1350
-      maxDuration: 1560
+      duration: 3600
+      maxDuration: 4000
     - type: BluespaceErrorRule
       gridPath: /Maps/_NF/Bluespace/cache.yml
       rewardFactor: 3.3
@@ -55,11 +55,11 @@
       path: /Audio/Announcements/attention.ogg
     endAnnouncement: station-event-bluespace-vault-end-announcement
     earliestStart: 100
-    minimumPlayers: 30
+    minimumPlayers: 1
     weight: 2
     startDelay: 10
-    duration: 1020
-    maxDuration: 1350
+    duration: 3600
+    maxDuration: 4000
   - type: BluespaceErrorRule
     gridPath: /Maps/_NF/Bluespace/vault.yml
     rewardFactor: 0.7
@@ -75,11 +75,11 @@
       path: /Audio/Announcements/attention.ogg
     endAnnouncement: station-event-bluespace-vault-end-announcement
     earliestStart: 100
-    minimumPlayers: 15
+    minimumPlayers: 1
     weight: 4
     startDelay: 10
-    duration: 590
-    maxDuration: 780
+    duration: 3600
+    maxDuration: 4000
   - type: BluespaceErrorRule
     gridPath: /Maps/_NF/Bluespace/vaultsmall.yml
     rewardFactor: 1
@@ -95,11 +95,11 @@
       path: /Audio/Announcements/attention.ogg
     endAnnouncement: station-event-bluespace-asteroid-end-announcement
     earliestStart: 100
-    minimumPlayers: 15
+    minimumPlayers: 1
     weight: 5
     startDelay: 10
-    duration: 1500
-    maxDuration: 1800
+    duration: 3600
+    maxDuration: 4000
   - type: BluespaceErrorRule
     gridPath: /Maps/_NF/Bluespace/asteroidvault.yml
 
@@ -114,11 +114,11 @@
       path: /Audio/Announcements/attention.ogg
     endAnnouncement: station-event-bluespace-asteroid-end-announcement
     earliestStart: 100
-    minimumPlayers: 15
+    minimumPlayers: 1
     weight: 3
     startDelay: 10
-    duration: 2100
-    maxDuration: 2400
+    duration: 3600
+    maxDuration: 4000
   - type: BluespaceErrorRule
     gridPath: /Maps/_NF/Bluespace/asteroidbunker.yml
 
@@ -133,10 +133,10 @@
       path: /Audio/Announcements/attention.ogg
     endAnnouncement: station-event-bluespace-ship-end-announcement
     earliestStart: 100
-    minimumPlayers: 15
+    minimumPlayers: 1
     weight: 5
     startDelay: 10
-    duration: 900
-    maxDuration: 1200
+    duration: 3600
+    maxDuration: 4000
   - type: BluespaceErrorRule
     gridPath: /Maps/_NF/Bluespace/cargoniaship.yml

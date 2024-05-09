@@ -26,6 +26,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
+      name: Pirate's cove
     - pos: 0.14431763,-0.13037014
       parent: invalid
       type: Transform
@@ -109,6 +110,9 @@ entities:
     - type: Shuttle
       linearDamping: 999999
       angularDamping: 999999
+    - type: IFF
+      flags: HideLabel
+      color: "#C83737"
     - type: GridPathfinding
     - gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg

@@ -178,7 +178,10 @@ public sealed class PublicTransitSystem : EntitySystem
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
-
+        if (StationList.Count == 0)
+        {
+            return; //TODO improve this hacky fix
+        }
         var query = EntityQueryEnumerator<TransitShuttleComponent, ShuttleComponent>();
         var curTime = _timing.CurTime;
 

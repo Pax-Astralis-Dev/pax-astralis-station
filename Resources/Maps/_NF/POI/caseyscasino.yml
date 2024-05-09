@@ -19,6 +19,7 @@ entities:
   - uid: 2
     components:
     - type: MetaData
+      name: Casey's Casino
     - pos: -0.5187805,-0.50625
       parent: invalid
       type: Transform
@@ -58,6 +59,10 @@ entities:
     - type: Shuttle
       linearDamping: 999999
       angularDamping: 999999
+    - type: IFF
+      color: "#FFA500"
+    - id: caseycasino
+      type: BecomesStation
     - type: GridPathfinding
     - gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg

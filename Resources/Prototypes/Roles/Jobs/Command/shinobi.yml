@@ -1,5 +1,5 @@
 - type: job
-  id: Shinobi
+  id: SectorShinobi
   name: job-name-shinobi
   description: job-description-shinobi
   playTimeTracker: Shinobi

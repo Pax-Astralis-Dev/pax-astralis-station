@@ -25,7 +25,7 @@ entities:
   entities:
   - uid: 1
     components:
-    - name: grid
+    - name: Omnichurch Beacon
       type: MetaData
     - pos: -0.51562405,-0.4921837
       parent: invalid
@@ -86,6 +86,8 @@ entities:
     - type: Shuttle
       angularDamping: 999999
       linearDamping: 999999
+    - type: IFF
+      color: "#FFA500"
     - type: GridPathfinding
     - gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
