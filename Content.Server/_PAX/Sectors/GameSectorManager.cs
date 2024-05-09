@@ -62,9 +62,9 @@ public sealed class GameSectorManager
 
     public MapId PreLoadSectors(IMapManager mapManager, MapLoaderSystem mapLoaderSystem, GameTicker game)
     {
+
         if (GetSectorMapIds().Count > 0)
             return GetSectorMapIds().FirstOrDefault(MapId.Nullspace);
-
         var sectors = AllSectors();
 
         foreach (var sector in sectors)
