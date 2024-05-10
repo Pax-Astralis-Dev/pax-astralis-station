@@ -369,7 +369,7 @@
     - type: ComputerBoard
       prototype: ComputerIFFSyndicate
     - type: StaticPrice
-      price: 100000 # 1 million dollars!
+      price: 1000 # not for sale, op
 
 - type: entity
   parent: BaseComputerCircuitboard
