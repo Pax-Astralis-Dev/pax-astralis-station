@@ -137,4 +137,10 @@ public sealed class GameSectorManager
             mapManager.DoMapInitialize(mapId);
         }
     }
+
+    public void Cleanup()
+    {
+        _sectors.Clear();
+
+    }
 }

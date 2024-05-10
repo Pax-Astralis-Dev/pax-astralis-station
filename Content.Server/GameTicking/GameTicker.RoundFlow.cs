@@ -499,6 +499,7 @@ namespace Content.Server.GameTicking
         /// </summary>
         private void ResettingCleanup()
         {
+            _gameSectorManager.Cleanup();
             // Move everybody currently in the server to lobby.
             foreach (var player in _playerManager.Sessions)
             {
