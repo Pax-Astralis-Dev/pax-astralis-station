@@ -1,0 +1,51 @@
+- type: sector
+  id: Alpha
+  name: Alpha
+  station:
+    type: sectorStation
+    id: 1
+    location:
+      distance: 0
+    color:
+      r: 1
+      g: 2
+      b: 3
+    stationId: Oreo
+    stationName: Pax Oreo Border Station
+  outposts:
+   - type: sectorOutpost
+     id: 2
+     location:
+       distance: 4000
+     color:
+       r: 1
+       g: 2
+       b: 3
+     path: /Maps/_NF/POI/tinnia.yml
+   - type: sectorOutpost
+     id: 3
+     location:
+       distance: 4000
+     color:
+       r: 1
+       g: 2
+       b: 3
+     path: /Maps/_NF/POI/caseyscasino.yml
+   - type: sectorOutpost
+     id: 4
+     location:
+       distance: 2000
+     color:
+       r: 1
+       g: 2
+       b: 3
+     path: /Maps/_NF/POI/courthouse.yml
+   - type: sectorOutpost
+     id: 6
+     location:
+       distance: 1000
+     color:
+       r: 1
+       g: 2
+       b: 3
+     path: Maps/_NF/POI/beacon.yml

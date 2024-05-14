@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Server._PAX.Sectors;
 using Content.Server.Announcements;
 using Content.Server.Discord;
 using Content.Server.GameTicking.Events;
@@ -26,6 +27,7 @@ namespace Content.Server.GameTicking
     {
         [Dependency] private readonly DiscordWebhook _discord = default!;
         [Dependency] private readonly ITaskManager _taskManager = default!;
+        [Dependency] private readonly GameSectorManager _gameSectorManager = default!;
 
         private static readonly Counter RoundNumberMetric = Metrics.CreateCounter(
             "ss14_round_number",
@@ -105,14 +107,11 @@ namespace Content.Server.GameTicking
 
             // Small chance the above could return no map.
             // ideally SelectMapByConfigRules will always find a valid map
-            if (mainStationMap != null)
-            {
-                maps.Add(mainStationMap);
-            }
-            else
-            {
+            if (mainStationMap == null)
                 throw new Exception("invalid config; couldn't select a valid station map!");
-            }
+
+            maps.Add(mainStationMap);
+
 
             if (CurrentPreset?.MapPool != null &&
                 _prototypeManager.TryIndex<GameMapPoolPrototype>(CurrentPreset.MapPool, out var pool) &&
@@ -152,7 +151,8 @@ namespace Content.Server.GameTicking
         /// <param name="loadOptions">Map loading options, includes offset.</param>
         /// <param name="stationName">Name to assign to the loaded station.</param>
         /// <returns>All loaded entities and grids.</returns>
-        public IReadOnlyList<EntityUid> LoadGameMap(GameMapPrototype map, MapId targetMapId, MapLoadOptions? loadOptions, string? stationName = null)
+        public IReadOnlyList<EntityUid> LoadGameMap(GameMapPrototype map, MapId targetMapId,
+            MapLoadOptions? loadOptions, string? stationName = null)
         {
             // Okay I specifically didn't set LoadMap here because this is typically called onto a new map.
             // whereas the command can also be used on an existing map.
@@ -175,84 +175,88 @@ namespace Content.Server.GameTicking
             try
             {
 #endif
-            // If this game ticker is a dummy or the round is already being started, do nothing!
-            if (DummyTicker || _startingRound)
-                return;
+                // If this game ticker is a dummy or the round is already being started, do nothing!
+                if (DummyTicker || _startingRound)
+                    return;
 
-            _startingRound = true;
+                _startingRound = true;
 
-            if (RoundId == 0)
-                IncrementRoundNumber();
+                if (RoundId == 0)
+                    IncrementRoundNumber();
 
-            ReplayStartRound();
+                ReplayStartRound();
 
-            DebugTools.Assert(RunLevel == GameRunLevel.PreRoundLobby);
-            _sawmill.Info("Starting round!");
+                DebugTools.Assert(RunLevel == GameRunLevel.PreRoundLobby);
+                _sawmill.Info("Starting round!");
 
-            SendServerMessage(Loc.GetString("game-ticker-start-round"));
+                SendServerMessage(Loc.GetString("game-ticker-start-round"));
 
-            // Just in case it hasn't been loaded previously we'll try loading it.
-            LoadMaps();
+                // Just in case it hasn't been loaded previously we'll try loading it.
+                DefaultMap = _gameSectorManager.PreLoadSectors(_mapManager, _map, this);
 
-            // map has been selected so update the lobby info text
-            // applies to players who didn't ready up
-            UpdateInfoText();
+                // map has been selected so update the lobby info text
+                // applies to players who didn't ready up
+                UpdateInfoText();
 
-            StartGamePresetRules();
+                StartGamePresetRules();
 
-            RoundLengthMetric.Set(0);
+                RoundLengthMetric.Set(0);
 
-            var startingEvent = new RoundStartingEvent(RoundId);
-            RaiseLocalEvent(startingEvent);
-            var readyPlayers = new List<ICommonSession>();
-            var readyPlayerProfiles = new Dictionary<NetUserId, HumanoidCharacterProfile>();
+                var startingEvent = new RoundStartingEvent(RoundId);
+                RaiseLocalEvent(startingEvent);
+                var readyPlayers = new List<ICommonSession>();
+                var readyPlayerProfiles = new Dictionary<NetUserId, HumanoidCharacterProfile>();
 
-            foreach (var (userId, status) in _playerGameStatuses)
-            {
-                if (LobbyEnabled && status != PlayerGameStatus.ReadyToPlay) continue;
-                if (!_playerManager.TryGetSessionById(userId, out var session)) continue;
+                foreach (var (userId, status) in _playerGameStatuses)
+                {
+                    if (LobbyEnabled && status != PlayerGameStatus.ReadyToPlay)
+                        continue;
+                    if (!_playerManager.TryGetSessionById(userId, out var session))
+                        continue;
 #if DEBUG
                 DebugTools.Assert(_userDb.IsLoadComplete(session), $"Player was readied up but didn't have user DB data loaded yet??");
 #endif
-                if (_banManager.GetRoleBans(userId) == null)
-                {
-                    Logger.ErrorS("RoleBans", $"Role bans for player {session} {userId} have not been loaded yet.");
-                    continue;
+                    if (_banManager.GetRoleBans(userId) == null)
+                    {
+                        Logger.ErrorS("RoleBans", $"Role bans for player {session} {userId} have not been loaded yet.");
+                        continue;
+                    }
+
+                    readyPlayers.Add(session);
+                    HumanoidCharacterProfile profile;
+                    if (_prefsManager.TryGetCachedPreferences(userId, out var preferences))
+                    {
+                        profile = (HumanoidCharacterProfile) preferences.GetProfile(preferences.SelectedCharacterIndex);
+                    }
+                    else
+                    {
+                        profile = HumanoidCharacterProfile.Random();
+                    }
+
+                    readyPlayerProfiles.Add(userId, profile);
                 }
-                readyPlayers.Add(session);
-                HumanoidCharacterProfile profile;
-                if (_prefsManager.TryGetCachedPreferences(userId, out var preferences))
-                {
-                    profile = (HumanoidCharacterProfile) preferences.GetProfile(preferences.SelectedCharacterIndex);
-                }
-                else
-                {
-                    profile = HumanoidCharacterProfile.Random();
-                }
-                readyPlayerProfiles.Add(userId, profile);
-            }
 
-            var origReadyPlayers = readyPlayers.ToArray();
+                var origReadyPlayers = readyPlayers.ToArray();
 
-            if (!StartPreset(origReadyPlayers, force))
-                return;
+                if (!StartPreset(origReadyPlayers, force))
+                    return;
 
-            // MapInitialize *before* spawning players, our codebase is too shit to do it afterwards...
-            _mapManager.DoMapInitialize(DefaultMap);
+                // MapInitialize *before* spawning players, our codebase is too shit to do it afterwards...
+                _gameSectorManager.LoadSectors(_mapManager);
 
-            SpawnPlayers(readyPlayers, readyPlayerProfiles, force);
+                SpawnPlayers(readyPlayers, readyPlayerProfiles, force);
 
-            _roundStartDateTime = DateTime.UtcNow;
-            RunLevel = GameRunLevel.InRound;
+                _roundStartDateTime = DateTime.UtcNow;
+                RunLevel = GameRunLevel.InRound;
 
-            _roundStartTimeSpan = _gameTiming.CurTime;
-            SendStatusToAll();
-            ReqWindowAttentionAll();
-            UpdateLateJoinStatus();
-            AnnounceRound();
-            UpdateInfoText();
-            RaiseLocalEvent(new RoundStartedEvent(RoundId));
-            SendRoundStartedDiscordMessage();
+                _roundStartTimeSpan = _gameTiming.CurTime;
+                SendStatusToAll();
+                ReqWindowAttentionAll();
+                UpdateLateJoinStatus();
+                AnnounceRound();
+                UpdateInfoText();
+                RaiseLocalEvent(new RoundStartedEvent(RoundId));
+                SendRoundStartedDiscordMessage();
 
 #if EXCEPTION_TOLERANCE
             }
@@ -262,7 +266,8 @@ namespace Content.Server.GameTicking
 
                 if (RoundStartFailShutdownCount > 0 && _roundStartFailCount >= RoundStartFailShutdownCount)
                 {
-                    _sawmill.Fatal($"Failed to start a round {_roundStartFailCount} time(s) in a row... Shutting down!");
+                    _sawmill.Fatal(
+                        $"Failed to start a round {_roundStartFailCount} time(s) in a row... Shutting down!");
                     _runtimeLog.LogException(e, nameof(GameTicker));
                     _baseServer.Shutdown("Restarting server");
                     return;
@@ -344,6 +349,7 @@ namespace Content.Server.GameTicking
                 {
                     connected = true;
                 }
+
                 ContentPlayerData? contentPlayerData = null;
                 if (userId != null && _playerManager.TryGetPlayerData(userId.Value, out var playerData))
                 {
@@ -493,6 +499,7 @@ namespace Content.Server.GameTicking
         /// </summary>
         private void ResettingCleanup()
         {
+            _gameSectorManager.Cleanup();
             // Move everybody currently in the server to lobby.
             foreach (var player in _playerManager.Sessions)
             {
@@ -513,15 +520,16 @@ namespace Content.Server.GameTicking
                 try
                 {
 #endif
-                // TODO: Maybe something less naive here?
-                // FIXME: Actually, definitely.
-                if (!Deleted(entity) && !Terminating(entity))
-                    EntityManager.DeleteEntity(entity);
+                    // TODO: Maybe something less naive here?
+                    // FIXME: Actually, definitely.
+                    if (!Deleted(entity) && !Terminating(entity))
+                        EntityManager.DeleteEntity(entity);
 #if EXCEPTION_TOLERANCE
                 }
                 catch (Exception e)
                 {
-                    _sawmill.Error($"Caught exception while trying to delete entity {ToPrettyString(entity)}, this might corrupt the game state...");
+                    _sawmill.Error(
+                        $"Caught exception while trying to delete entity {ToPrettyString(entity)}, this might corrupt the game state...");
                     _runtimeLog.LogException(e, nameof(GameTicker));
                     continue;
                 }
@@ -544,7 +552,8 @@ namespace Content.Server.GameTicking
             _playerGameStatuses.Clear();
             foreach (var session in _playerManager.Sessions)
             {
-                _playerGameStatuses[session.UserId] = LobbyEnabled ?  PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
+                _playerGameStatuses[session.UserId] =
+                    LobbyEnabled ? PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
             }
         }
 
@@ -559,7 +568,8 @@ namespace Content.Server.GameTicking
 
             RaiseNetworkEvent(new TickerLobbyCountdownEvent(_roundStartTime, Paused));
 
-            _chatManager.DispatchServerAnnouncement(Loc.GetString("game-ticker-delay-start", ("seconds",time.TotalSeconds)));
+            _chatManager.DispatchServerAnnouncement(Loc.GetString("game-ticker-delay-start",
+                ("seconds", time.TotalSeconds)));
 
             return true;
         }
@@ -587,7 +597,7 @@ namespace Content.Server.GameTicking
             // Preload maps so we can start faster
             else if (_roundStartTime - RoundPreloadTime < _gameTiming.CurTime)
             {
-                LoadMaps();
+                _gameSectorManager.PreLoadSectors(_mapManager, _map, this);
             }
         }
 
@@ -598,7 +608,8 @@ namespace Content.Server.GameTicking
 
         private void AnnounceRound()
         {
-            if (CurrentPreset == null) return;
+            if (CurrentPreset == null)
+                return;
 
             var options = _prototypeManager.EnumeratePrototypes<RoundAnnouncementPrototype>().ToList();
 
@@ -621,7 +632,8 @@ namespace Content.Server.GameTicking
                 if (_webhookIdentifier == null)
                     return;
 
-                var mapName = _gameMapManager.GetSelectedMap()?.MapName ?? Loc.GetString("discord-round-notifications-unknown-map");
+                var mapName = _gameMapManager.GetSelectedMap()?.MapName ??
+                              Loc.GetString("discord-round-notifications-unknown-map");
                 var content = Loc.GetString("discord-round-notifications-started", ("id", RoundId), ("map", mapName));
 
                 var payload = new WebhookPayload { Content = content };
@@ -759,10 +771,12 @@ namespace Content.Server.GameTicking
         /// </summary>
         /// <remarks>If you spawn a player by yourself from this event, don't forget to call <see cref="GameTicker.PlayerJoinGame"/> on them.</remarks>
         public List<ICommonSession> PlayerPool { get; }
+
         public IReadOnlyDictionary<NetUserId, HumanoidCharacterProfile> Profiles { get; }
         public bool Forced { get; }
 
-        public RulePlayerSpawningEvent(List<ICommonSession> playerPool, IReadOnlyDictionary<NetUserId, HumanoidCharacterProfile> profiles, bool forced)
+        public RulePlayerSpawningEvent(List<ICommonSession> playerPool,
+            IReadOnlyDictionary<NetUserId, HumanoidCharacterProfile> profiles, bool forced)
         {
             PlayerPool = playerPool;
             Profiles = profiles;
@@ -780,7 +794,8 @@ namespace Content.Server.GameTicking
         public IReadOnlyDictionary<NetUserId, HumanoidCharacterProfile> Profiles { get; }
         public bool Forced { get; }
 
-        public RulePlayerJobsAssignedEvent(ICommonSession[] players, IReadOnlyDictionary<NetUserId, HumanoidCharacterProfile> profiles, bool forced)
+        public RulePlayerJobsAssignedEvent(ICommonSession[] players,
+            IReadOnlyDictionary<NetUserId, HumanoidCharacterProfile> profiles, bool forced)
         {
             Players = players;
             Profiles = profiles;

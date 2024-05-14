@@ -306,6 +306,10 @@ entities:
             194: -6,-22
             195: -7,-20
       type: DecalGrid
+    - type: IFF
+      color: "#FFA500"
+    - id: courthouse
+      type: BecomesStation
     - version: 2
       data:
         tiles:

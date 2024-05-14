@@ -18,6 +18,7 @@ entities:
   - uid: 10
     components:
     - type: MetaData
+      name: Cargo Depot
     - pos: -0.5,-0.5208335
       parent: invalid
       type: Transform
@@ -54,6 +55,10 @@ entities:
     - type: Shuttle
       angularDamping: 999999
       linearDamping: 999999
+    - type: IFF
+      color: "#37C837"
+    - id: cargodepot
+      type: BecomesStation
     - type: GridPathfinding
     - gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg

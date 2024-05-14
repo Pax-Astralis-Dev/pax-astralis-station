@@ -15,7 +15,7 @@ entities:
   entities:
   - uid: 1
     components:
-    - name: grid
+    - name: Grifty's Grub
       type: MetaData
     - pos: -0.484375,-0.47654724
       parent: invalid
@@ -355,7 +355,9 @@ entities:
       type: GridAtmosphere
     - type: GasTileOverlay
     - type: RadiationGridResistance
-    - id: Grifty
+    - type: IFF
+      color: "#FFA500"
+    - id: grifty
       type: BecomesStation
 - proto: AirCanister
   entities:
