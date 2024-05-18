@@ -43,8 +43,7 @@ entities:
     components:
     - name: Pax Oreo Border Station
       type: MetaData
-    - pos: -73.25791,-31.06069
-      parent: 1
+    - parent: 1
       type: Transform
     - chunks:
         3,1:

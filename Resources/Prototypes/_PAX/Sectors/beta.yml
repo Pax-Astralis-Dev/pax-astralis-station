@@ -10,8 +10,8 @@
       r: 1
       g: 2
       b: 3
-    stationId: Oreo
-    stationName: Pax Oreo Border Station
+    stationId: FTLBeacon
+    stationName: FTL Beacon
   outposts:
   - type: sectorOutpost
     id: 1
