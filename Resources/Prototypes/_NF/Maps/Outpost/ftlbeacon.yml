@@ -1,0 +1,13 @@
+- type: gameMap
+  id: FTLBeacon
+  mapName: 'FTL Beacon'
+  mapPath: /Maps/_PAX/Outpost/ftlbeacon.yml
+  minPlayers: 0
+  maxPlayers: 100
+  stations:
+    FTLBeacon:
+      stationProto: StandardFrontierStation
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'FTL Beacon'
+
