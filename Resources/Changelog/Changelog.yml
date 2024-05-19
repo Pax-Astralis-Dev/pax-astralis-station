@@ -3212,3 +3212,29 @@ Entries:
     message: Added feature to have split cargo requests base on links
   id: 4805
   time: '2024-04-21T16:43:54.0000000+00:00'
+- author: Fwutters
+  changes:
+  - type: Add
+    message: Added Hegemony themed sprites for security uniforms.
+  id: 4806
+  time: '2024-05-05T15:53:54.0000000+00:00'
+- author: Gry
+  changes:
+  - type: Add
+    message: Added Hegemony flag sprites.
+  id: 4807
+  time: '2024-05-14T20:03:54.0000000+00:00'
+- author: NexusNull
+  changes:
+  - type: Add
+    message: Added Sectors. There are now two sectors Alpha and Beta which are FTL-able.
+  - type: Add
+    message: Added FTL beacon on Beta sector.
+  id: 4808
+  time: '2024-05-19T22:28:54.0000000+00:00'
+- author: ZolKidd
+  changes:
+  - type: Tweak
+    message: Added smuggling tweaks. Removed mines and xeno turrets, made the cache bigger.
+  id: 4809
+  time: '2024-05-19T22:47:54.0000000+00:00'
