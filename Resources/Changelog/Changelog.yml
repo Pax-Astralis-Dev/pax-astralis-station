@@ -3238,3 +3238,9 @@ Entries:
     message: Added smuggling tweaks. Removed mines and xeno turrets, made the cache bigger.
   id: 4809
   time: '2024-05-19T22:47:54.0000000+00:00'
+- author: Fwutters
+  changes:
+  - type: Add
+    message: Added new sprites for Sector Administrator, Sector Commander, Security and Central Command.
+  id: 4810
+  time: '2024-05-22T22:47:54.0000000+00:00'
