@@ -1,0 +1,52 @@
+# Author Info
+# GitHub: ???
+# Discord: ???
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Invictus
+  name: HIMS Invictus
+  description: A hegemony all-purpose mothership - surprisingly on sale following capitalistic principles!
+  price: 3800000
+  category: Large
+  group: Civilian
+  shuttlePath: /Maps/_NF/Shuttles/invictus.yml
+
+- type: gameMap
+  id: Invictus
+  mapName: 'HIMS Invictus'
+  mapPath: /Maps/_NF/Shuttles/invictus.yml
+  minPlayers: 0
+  stations:
+    Invictus:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Invictus {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            Quartermaster: [ 0, 0 ]
+            Lawyer: [ 0, 0 ]
+            Janitor: [ 0, 0 ]
+            Scientist: [ 0, 0 ]
+            ResearchDirector: [ 0, 0 ]
+            ChiefMedicalOfficer: [ 0, 0 ]
+            ChiefEngineer: [ 0, 0 ]
+            Chef: [ 0, 0 ]
+            Bartender: [ 0, 0 ]
+            MedicalDoctor: [ 0, 0 ]
+            Chemist: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
+            AtmosphericTechnician: [ 0, 0 ]
+            StationEngineer: [ 0, 0 ]
+            Musician: [ 0, 0 ]
+            Pilot: [ 0, 0 ]

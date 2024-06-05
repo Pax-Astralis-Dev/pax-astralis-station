@@ -80,3 +80,12 @@
       g: 2
       b: 3
     path: /Maps/_NF/POI/anomalouslab.yml
+  - type: sectorOutpost
+    id: 8
+    location:
+      distance: 2500
+    color:
+      r: 1
+      g: 2
+      b: 3
+    path: /Maps/_NF/POI/invictus.yml

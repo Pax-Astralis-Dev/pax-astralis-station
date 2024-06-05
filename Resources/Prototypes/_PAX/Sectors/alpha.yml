@@ -49,3 +49,12 @@
        g: 2
        b: 3
      path: Maps/_NF/POI/beacon.yml
+   - type: sectorOutpost
+     id: 7
+     location:
+       distance: 4000
+     color:
+       r: 1
+       g: 2
+       b: 3
+     path: Maps/_NF/POI/gregend.yml
