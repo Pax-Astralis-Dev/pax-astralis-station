@@ -3244,3 +3244,15 @@ Entries:
     message: Added new sprites for Sector Administrator, Sector Commander, Security and Central Command.
   id: 4810
   time: '2024-05-22T22:47:54.0000000+00:00'
+- author: Gregend
+  changes:
+  - type: Add
+    message: Legend's Co corporation station added to Alpha sector.
+  id: 4811
+  time: '2024-06-05T11:32:54.0000000+00:00'
+- author: Gry
+  changes:
+  - type: Add
+    message: Hegemony mothership Invictus has been added to Beta Sector, and it is purchaseable at shipyard for 3.8 million.
+  id: 4812
+  time: '2024-06-05T12:27:54.0000000+00:00'
