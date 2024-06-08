@@ -1,26 +1,26 @@
 # Author Info
-# GitHub: ???
-# Discord: ???
+# GitHub: merrokitsune
+# Discord: Bellkitsu
 
 # Maintainer Info
 # GitHub: ???
 # Discord: ???
 
 # Shuttle Notes:
-#
+# The Blockhead replaces Prospector as part of a shuttle rewrite.
 - type: vessel
-  id: Prospector
-  name: NC Prospector
+  id: Blockhead
+  name: NC Blockhead
   description: A small mining vessel designed to assist salvage operations.
-  price: 23000
+  price: 24000
   category: Small
   group: Civilian
-  shuttlePath: /Maps/_NF/Shuttles/prospector.yml
+  shuttlePath: /Maps/_NF/Shuttles/blockhead.yml
 
 - type: gameMap
   id: Prospector
-  mapName: 'NC Prospector'
-  mapPath: /Maps/_NF/Shuttles/prospector.yml
+  mapName: 'NC Blockhead'
+  mapPath: /Maps/_NF/Shuttles/blockhead.yml
   minPlayers: 0
   stations:
     Prospector:
@@ -35,3 +35,4 @@
           overflowJobs: []
           availableJobs:
             SalvageSpecialist: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
