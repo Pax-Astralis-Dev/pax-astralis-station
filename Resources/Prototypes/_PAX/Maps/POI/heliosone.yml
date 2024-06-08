@@ -1,0 +1,11 @@
+- type: gameMap
+  id: Helios
+  mapName: 'Helios One'
+  mapPath: /Maps/_PAX/POI/heliosone.yml
+  minPlayers: 0
+  stations:
+    Helios:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Helios One'

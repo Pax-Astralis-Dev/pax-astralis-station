@@ -3256,3 +3256,21 @@ Entries:
     message: Hegemony mothership Invictus has been added to Beta Sector, and it is purchaseable at shipyard for 3.8 million.
   id: 4812
   time: '2024-06-05T12:27:54.0000000+00:00'
+- author: Valor
+  changes:
+  - type: Add
+    message: New POI Helios One, originally made by Valor in April has been added to the Alpha sector. Expedition lounge replacement.
+  id: 4813
+  time: '2024-06-08T12:27:54.0000000+00:00'
+- author: Gry
+  changes:
+  - type: Tweak
+    message: Helios One size shrunk by 30%, and some fixes such as electrification of all areas and "hegemonization".
+  id: 4814
+  time: '2024-06-08T12:27:54.0000000+00:00'
+- author: Gry
+  changes:
+  - type: Tweak
+    message: Expedition shuttle console added on Oreo temporarily. AutoTune vendor added to Oreo's bar, and two clothing vendors to Oreo's cargo area.
+  id: 4815
+  time: '2024-06-08T16:05:54.0000000+00:00'

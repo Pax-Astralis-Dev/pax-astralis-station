@@ -57,4 +57,13 @@
        r: 1
        g: 2
        b: 3
-     path: Maps/_NF/POI/gregend.yml
+     path: Maps/_PAX/POI/gregend.yml
+   - type: sectorOutpost
+     id: 8
+     location:
+       distance: 4000
+     color:
+       r: 1
+       g: 2
+       b: 3
+     path: Maps/_PAX/POI/heliosone.yml
