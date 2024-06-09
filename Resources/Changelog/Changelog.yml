@@ -3274,3 +3274,9 @@ Entries:
     message: Expedition shuttle console added on Oreo temporarily. AutoTune vendor added to Oreo's bar, and two clothing vendors to Oreo's cargo area.
   id: 4815
   time: '2024-06-08T16:05:54.0000000+00:00'
+- author: deltanedas
+  changes:
+  - type: Add
+    message: Added Improvised Explosive Device (IED) back to the game - Gry
+  id: 4816
+  time: '2024-06-09T14:12:54.0000000+00:00'
