@@ -1,0 +1,28 @@
+- type: vessel
+  id: Zol
+  name: HSF Zol
+  description: A compact hegemony security ship fit for both military and policing purposes. Agile and high firepower.
+  price: 46000
+  category: Medium
+  group: Security
+  shuttlePath: /Maps/_PAX/Shuttles/zol.yml
+
+- type: gameMap
+  id: Zol
+  mapName: 'HSF Zol'
+  mapPath: /Maps/_PAX/Shuttles/zol.yml
+  minPlayers: 0
+  stations:
+    Prowler:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Prowler {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            SecurityOfficer: [ 2, 2 ]
+            Warden: [ 1, 1 ]
