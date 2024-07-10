@@ -3280,3 +3280,11 @@ Entries:
     message: Ported Improvised Explosive Device (IED) by deltanedas back to the game - Gry
   id: 4816
   time: '2024-06-09T14:12:54.0000000+00:00'
+- author: Barncle14, ZolKidd, Gry
+  changes:
+  - type: Add
+    message: NC Blockhead and HSF Zol to shipyard and security shipyards.
+  - type: Remove
+    message: Removed all frontier ships from shipyards.
+  id: 4817
+  time: '2024-07-10T14:12:54.0000000+00:00'
