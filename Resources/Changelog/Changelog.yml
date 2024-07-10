@@ -3288,3 +3288,11 @@ Entries:
     message: Removed all frontier ships from shipyards.
   id: 4817
   time: '2024-07-10T14:12:54.0000000+00:00'
+- author: Gry
+  changes:
+  - type: Add
+    message: Science corner added to Oreo's cargo area. You can find science essentials such as reagant grinder, circuit imprinter and basic RnD server there. Also added more drobe vendors around the Oreo's outer ring.
+  - type: Tweak
+    message: Added some essential default jobs back on Oreo.
+  id: 4818
+  time: '2024-07-10T15:27:54.0000000+00:00'
