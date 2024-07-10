@@ -1,38 +1,38 @@
 # Author Info
-# GitHub: ???
-# Discord: ???
+# GitHub: merrokitsune
+# Discord: Bellkitsu
 
 # Maintainer Info
 # GitHub: ???
 # Discord: ???
 
 # Shuttle Notes:
-#
+# # The Blockhead replaces Prospector as part of a shuttle rewrite.
 - type: vessel
-  id: Pulse
-  name: NM Pulse
-  description: A small rapid response medical ship
-  price: 20500
+  id: Blockhead
+  name: NC Blockhead
+  description: A small mining vessel designed to assist salvage operations.
+  price: 24000
   category: Small
   group: Civilian
-  shuttlePath: /Maps/_NF/Shuttles/pulse.yml
+  shuttlePath: /Maps/_PAX/Shuttles/blockhead.yml
 
 - type: gameMap
-  id: Pulse
-  mapName: 'NM Pulse'
-  mapPath: /Maps/_NF/Shuttles/pulse.yml
+  id: Prospector
+  mapName: 'NC Blockhead'
+  mapPath: /Maps/_PAX/Shuttles/blockhead.yml
   minPlayers: 0
   stations:
-    Pulse:
+    Prospector:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Pulse {1}'
+          mapNameTemplate: 'Prospector {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
           overflowJobs: []
           availableJobs:
-            Paramedic: [ 0, 0 ]
+            SalvageSpecialist: [ 0, 0 ]
             Pilot: [ 0, 0 ]

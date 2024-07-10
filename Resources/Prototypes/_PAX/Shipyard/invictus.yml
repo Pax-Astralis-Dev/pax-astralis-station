@@ -15,12 +15,12 @@
   price: 3800000
   category: Large
   group: Civilian
-  shuttlePath: /Maps/_NF/Shuttles/invictus.yml
+  shuttlePath: /Maps/_PAX/Shuttles/invictus.yml
 
 - type: gameMap
   id: Invictus
   mapName: 'HIMS Invictus'
-  mapPath: /Maps/_NF/Shuttles/invictus.yml
+  mapPath: /Maps/_PAX/Shuttles/invictus.yml
   minPlayers: 0
   stations:
     Invictus:
