@@ -7,32 +7,31 @@
 # Discord: ???
 
 # Shuttle Notes:
-# # The Blockhead replaces Prospector as part of a shuttle rewrite.
+
 - type: vessel
-  id: Blockhead
-  name: NC Blockhead
-  description: A small mining vessel designed to assist salvage operations.
-  price: 24000
+  id: Gryphod
+  name: NC Gryphod
+  description: A small and compact mail truck, cheaply available due to its mass production being sponsored by an unfamiliar influencer.
+  price: 12000
   category: Small
   group: Civilian
-  shuttlePath: /Maps/_PAX/Shuttles/blockhead.yml
+  shuttlePath: /Maps/_PAX/Shuttles/gryphod.yml
 
 - type: gameMap
-  id: Blockhead
-  mapName: 'NC Blockhead'
-  mapPath: /Maps/_PAX/Shuttles/blockhead.yml
+  id: Gryphod
+  mapName: 'NC Gryphod'
+  mapPath: /Maps/_PAX/Shuttles/gryphod.yml
   minPlayers: 0
   stations:
-    Blockhead:
+    Gryphod:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Blockhead {1}'
+          mapNameTemplate: 'Gryphod {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
           overflowJobs: []
           availableJobs:
-            SalvageSpecialist: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
+            MailCarrier: [ 1, 1 ]

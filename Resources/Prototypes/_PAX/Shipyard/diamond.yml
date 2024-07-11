@@ -1,0 +1,41 @@
+# Author Info
+# GitHub: gry-man
+# Discord: Gry
+
+# Maintainer Info
+# GitHub: https://github.com/gry-man
+# Discord: https://discord.gg/QZa6SnAy
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Diamond
+  name: NC Diamond
+  description: A next-level science and mining vessel, standardized by Hegemony resulting in to the diamond shape.
+  price: 50000
+  category: Medium
+  group: Civilian
+  shuttlePath: /Maps/_PAX/Shuttles/diamond.yml
+
+- type: gameMap
+  id: Diamond
+  mapName: 'NC Diamond'
+  mapPath: /Maps/_PAX/Shuttles/diamond.yml
+  minPlayers: 0
+  stations:
+    Diamond:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Diamond {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            StationEngineer: [ 0, 0 ]
+            Scientist: [ 0, 0 ]
+            ResearchDirector: [ 0, 0 ]
+            Bartender: [ 0, 0 ]
+            SalvageSpecialist: [ 0, 0 ]

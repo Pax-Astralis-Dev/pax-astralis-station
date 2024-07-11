@@ -3296,3 +3296,11 @@ Entries:
     message: Added some essential default jobs back on Oreo.
   id: 4818
   time: '2024-07-10T15:27:54.0000000+00:00'
+- author: Gry
+  changes:
+  - type: Add
+    message: New ship expedition ship NC Lancer and science/mining ship NC Diamod added. Also added mail truck Gryphod made by Barnacle14. Thanks Barnacle!
+  - type: Tweak
+    message: Fixed ID of Blockhead, making it sale normally on shipyard console.
+  id: 4819
+  time: '2024-07-11T23:47:54.0000000+00:00'
