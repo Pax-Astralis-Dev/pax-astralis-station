@@ -11,23 +11,12 @@ tilemap:
 entities:
 - proto: ""
   entities:
-  - uid: 1
-    components:
-    - name: NC Blockhead
-      type: MetaData
-    - type: Transform
-    - type: Map
-    - type: PhysicsMap
-    - type: GridTree
-    - type: MovedGrids
-    - type: Broadphase
-    - type: OccluderTree
   - uid: 2
     components:
     - name: NC Blockhead
       type: MetaData
     - pos: -1.5726521,0.9838985
-      parent: 1
+      parent: invalid
       type: Transform
     - chunks:
         0,0:
@@ -467,7 +456,7 @@ entities:
       pos: -4.5,-1.5
       parent: 2
       type: Transform
-    - secondsUntilStateChange: -2779.4753
+    - secondsUntilStateChange: -2782.5586
       state: Opening
       type: Door
   - uid: 103

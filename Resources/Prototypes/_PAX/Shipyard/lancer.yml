@@ -1,0 +1,40 @@
+# Author Info
+# GitHub: gry-man
+# Discord: Gry
+
+# Maintainer Info
+# GitHub: https://github.com/gry-man
+# Discord: https://discord.gg/QZa6SnAy
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Lancer
+  name: NC Lancer
+  description: Repurposed and expedition capable - Ship initially designed for capturing xeno-creatures.
+  price: 32000
+  category: Small
+  group: Expedition
+  shuttlePath: /Maps/_PAX/Shuttles/lancer.yml
+
+- type: gameMap
+  id: Lancer
+  mapName: 'NC Lancer'
+  mapPath: /Maps/_PAX/Shuttles/lancer.yml
+  minPlayers: 0
+  stations:
+    Lancer:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Lancer {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
+            MedicalDoctor: [ 0, 0 ]
+            SalvageSpecialist: [ 0, 0 ]
