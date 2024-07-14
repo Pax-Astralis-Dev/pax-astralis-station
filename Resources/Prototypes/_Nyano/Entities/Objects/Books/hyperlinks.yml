@@ -75,7 +75,7 @@
     layers:
     - state: book_cooking
   - type: HyperlinkBook
-    url: https://wiki.nyanotrasen.moe/view/Cooking
+    url: https://github.com/Pax-Astralis-Dev/pax-astralis-station/blob/main/wiki/guides/SS14_RP_Game_Cookbook.md
 
 - type: entity
   parent: BaseHyperlinkBook
