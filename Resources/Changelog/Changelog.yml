@@ -3304,3 +3304,9 @@ Entries:
     message: Fixed ID of Blockhead, making it sale normally on shipyard console.
   id: 4819
   time: '2024-07-11T23:47:54.0000000+00:00'
+- author: Barnacle14
+  changes:
+  - type: Add
+    message: Four new shuttles added to shipyards - HSF Inserter, a security transport, NC Dine, a restaurant ship, NC Gryphod-M an ambulance and NC Finder an expedition and science vessel.
+  id: 4820
+  time: '2024-07-14T12:43:54.0000000+00:00'

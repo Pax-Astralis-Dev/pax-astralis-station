@@ -1,0 +1,37 @@
+# Author Info
+# GitHub: merrokitsune
+# Discord: Bellkitsu
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Gryphod-M
+  name: NC Gryphod-M
+  description: A small and compact ambulance, cheaply available due to its mass production being sponsored by an unfamiliar influencer.
+  price: 12000
+  category: Small
+  group: Civilian
+  shuttlePath: /Maps/_PAX/Shuttles/gryphod_m.yml
+
+- type: gameMap
+  id: Gryphod-M
+  mapName: 'NC Gryphod-M'
+  mapPath: /Maps/_PAX/Shuttles/gryphod.yml
+  minPlayers: 0
+  stations:
+    Gryphod-M:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Gryphod-M {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            Paramedic: [ 1, 1 ]

@@ -1,0 +1,39 @@
+# Author Info
+# GitHub: merrokitsune
+# Discord: Bellkitsu
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Shuttle Notes:
+# # This should allow for starter food businesses.
+- type: vessel
+  id: Diner
+  name: NC Diner
+  description: A ship that also acts as a miniature fast-food restaurant.
+  price: 42000
+  category: Small
+  group: Civilian
+  shuttlePath: /Maps/_PAX/Shuttles/diner.yml
+
+- type: gameMap
+  id: Diner
+  mapName: 'NC Diner'
+  mapPath: /Maps/_PAX/Shuttles/diner.yml
+  minPlayers: 0
+  stations:
+    Diner:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Diner {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            Botanist: [ 0, 0 ]
+            Chef: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
