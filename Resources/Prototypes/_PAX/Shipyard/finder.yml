@@ -1,0 +1,40 @@
+# Author Info
+# GitHub: -
+# Discord: -
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Finder
+  name: NC Finder
+  description: Expedition ship designed for scientific studies of xenobiological creatures on planets. Perfect for small crew.
+  price: 40000
+  category: Small
+  group: Expedition
+  shuttlePath: /Maps/_PAX/Shuttles/finder.yml
+
+- type: gameMap
+  id: Finder
+  mapName: 'NC Finder'
+  mapPath: /Maps/_PAX/Shuttles/finder.yml
+  minPlayers: 0
+  stations:
+    Finder:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'NC Finder {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            Pilot: [ 0, 0 ]
+            SalvageSpecialist: [ 0, 0 ]
+            Scientist: [ 0, 0 ]
+            StationEngineer: [ 0, 0 ]

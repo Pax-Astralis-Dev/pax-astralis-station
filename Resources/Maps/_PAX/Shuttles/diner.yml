@@ -19,7 +19,7 @@ entities:
   entities:
   - uid: 1
     components:
-    - name: grid
+    - name: NC Diner
       type: MetaData
     - pos: -0.8906326,-0.75
       parent: invalid

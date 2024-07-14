@@ -1,0 +1,28 @@
+- type: vessel
+  id: Inserter
+  name: HSF Inserter
+  description: Hegemony security transport, meant mainly for transporting personnel but can also house one prisoner.
+  price: 29000
+  category: Small
+  group: Security
+  shuttlePath: /Maps/_PAX/Shuttles/inserter.yml
+
+- type: gameMap
+  id: Inserter
+  mapName: 'HSF Inserter'
+  mapPath: /Maps/_PAX/Shuttles/inserter.yml
+  minPlayers: 0
+  stations:
+    Inserter:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Inserter {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            SecurityOfficer: [ 2, 2 ]
+            Warden: [ 1, 1 ]
