@@ -145,7 +145,7 @@ public sealed class NfAdventureRuleSystem : GameRuleSystem<AdventureRuleComponen
 
     // Load and spawn the Carpon planet on map ID 200
     var carponOffset = _random.NextVector2(3000f, 8500f); // You can set specific coordinates if required
-    if (_map.TryLoad(carponMapId, "/Maps/_PAX/planets/carpon.yml", out var carponGrids, new MapLoadOptions
+    if (_map.TryLoad(carponMapId, "/Maps/_PAX/Planets/carpon.yml", out var carponGrids, new MapLoadOptions
         {
             Offset = carponOffset
         }))
