@@ -3310,3 +3310,9 @@ Entries:
     message: Four new shuttles added to shipyards - HSF Inserter, a security transport, NC Dine, a restaurant ship, NC Gryphod-M an ambulance and NC Finder an expedition and science vessel.
   id: 4820
   time: '2024-07-14T12:43:54.0000000+00:00'
+- author: Gry
+  changes:
+  - type: Add
+    message: Added Carpon - a new FTL-able ice planet full of dangers and treasure. Also on Carpon make sure that the carps Carpoff!
+  id: 4821
+  time: '2024-07-15T19:52:54.0000000+00:00'
