@@ -137,6 +137,23 @@ public sealed class NfAdventureRuleSystem : GameRuleSystem<AdventureRuleComponen
             //because they are all offset. confirmed good size grid, just need to fix all the offsets.
             _dunGen.GenerateDungeon(dunGen, grids[0], mapGrid, (Vector2i) offset, seed);
         }
+    var carponMapId = new MapId(200);
+    if (!_mapManager.MapExists(carponMapId))
+    {
+        _mapManager.CreateMap(carponMapId);
+    }
+
+    // Load and spawn the Carpon planet on map ID 200
+    var carponOffset = _random.NextVector2(3000f, 8500f); // You can set specific coordinates if required
+    if (_map.TryLoad(carponMapId, "/Maps/_PAX/planets/carpon.yml", out var carponGrids, new MapLoadOptions
+        {
+            Offset = carponOffset
+        }))
+    {
+        var carponGrid = EnsureComp<MapGridComponent>(carponGrids[0]);
+        _shuttle.AddIFFFlag(carponGrids[0], IFFFlags.HideLabel);
+        _console.WriteLine(null, $"Carpon planet spawned at {carponOffset} on map ID {carponMapId}");
+    }
     }
 
     private async Task ReportRound(String message,  int color = 0x77DDE7)

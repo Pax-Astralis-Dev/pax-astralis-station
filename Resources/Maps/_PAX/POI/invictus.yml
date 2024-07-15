@@ -2997,7 +2997,6 @@ entities:
       type: GridAtmosphere
     - type: GasTileOverlay
     - type: RadiationGridResistance
-    - type: FTLDestination
 - proto: AirCanister
   entities:
   - uid: 2785
