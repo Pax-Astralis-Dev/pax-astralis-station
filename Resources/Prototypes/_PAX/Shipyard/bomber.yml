@@ -1,0 +1,41 @@
+# Author Info
+# GitHub: -
+# Discord: -
+
+# Maintainer Info
+# GitHub: -
+# Discord: -
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Bomber
+  name: NC Bomber
+  description: Decomissioned Hegemony bomber on sale, repurposed as an engineering and construction ship. Surprisingly, comes with the original ship cannons.
+  price: 90000
+  category: Medium
+  group: Civilian
+  shuttlePath: /Maps/_PAX/Shuttles/bomber.yml
+
+- type: gameMap
+  id: Bomber
+  mapName: 'NC Bomber'
+  mapPath: /Maps/_PAX/Shuttles/bomber.yml
+  minPlayers: 0
+  stations:
+    Bomber:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Bomber {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            StationEngineer: [ 0, 0 ]
+            Scientist: [ 0, 0 ]
+            ResearchDirector: [ 0, 0 ]
+            Bartender: [ 0, 0 ]
+            SalvageSpecialist: [ 0, 0 ]
