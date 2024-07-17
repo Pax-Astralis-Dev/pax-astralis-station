@@ -679,7 +679,7 @@ entities:
       pos: 0.5,2.5
       parent: 1
       type: Transform
-- proto: AirlockCommandLocked
+- proto: AirlockCaptainLocked
   entities:
   - uid: 25
     components:
@@ -746,7 +746,7 @@ entities:
     - pos: 7.5,0.5
       parent: 1
       type: Transform
-    - secondsUntilStateChange: -91.6663
+    - secondsUntilStateChange: -121.61618
       state: Opening
       type: Door
 - proto: AirlockExternalGlassShuttleLocked
