@@ -3316,7 +3316,7 @@ Entries:
     message: Added Carpon - a new FTL-able ice planet full of dangers and treasure. Also on Carpon make sure that the carps Carpoff!
   id: 4821
   time: '2024-07-15T19:52:54.0000000+00:00'
-  - author: Gry
+- author: Gry
   changes:
   - type: Add
     message: New ship Bomber added. It is an engineering ship that can make gases and bombs. Comes with ship cannons due to its past as Hegemony fleet's bomber.
