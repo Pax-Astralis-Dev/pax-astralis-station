@@ -1,87 +1,91 @@
-﻿
-[color=#00FF00]First time joiners: If you get stuck to job selection menu (can't choose jobs). Restart your connection! The database might sometimes need time to synchronize if it is first time connecting.[/color]
+﻿[color=#00FF00]First time joiners: If you get stuck to job selection menu (can't choose jobs). Restart your connection! The database might sometimes need time to synchronize if it is first time connecting.[/color]
 
 [color=#ff0000]Pax Astralis Station is a Light-Medium Roleplay server. Serious roleplay and competence is required of Command and Security. As captain (MRP applies) of a ship you are also required to roleplay to some extent as you will need to take care of your crew and pay them. Bank balance remains consistent across rounds.[/color]
 The server can be considered LRP when it comes to other roles.
 
-[color=#a4885c]0.[/color]  YouTuber/Streamer amendment: The server supports content creators, and leeway to rules can be given for content creation purposes. If you need support, you can contact Central Command any time!
+Alpha Sector Rules (Safe Zone)
+
+[color=#a4885c]0.[/color] YouTuber/Streamer amendment: The server supports content creators, and leeway to rules can be given for content creation purposes. If you need support, you can contact Central Command any time!
 
 [color=#a4885c]0.1.[/color] All of these rules apply as they are intended.
-	- Every example of a rule break cannot be defined as written, therefore, enforcement of the rules is subject to staff interpretation of the rule's intention.
+- Every example of a rule break cannot be defined as written, therefore, enforcement of the rules is subject to staff interpretation of the rule's intention.
 
 [color=#a4885c]1.[/color] Erotic Roleplay (ERP), erotic content, or 18+ sexual content is [color=#ff0000]not allowed under any circumstance[/color].
 
 [color=#a4885c]2.[/color] Follow the general code of conduct:
-	-2.1. Don't be a dick nor harass other players.
-	-2.2. Do not evade bans.
-	-2.3. Don't incite hatred based on ethnicity or other individual characteristic
-	-2.4. Do not attempt to cause lag to the server.
-	-2.5. Do not grief or cause any damage to main station, unless you have a very good roleplay reason.
-	-2.6. Do not leave the server to avoid investigation from low command/central command.
-	-2.7. Do not respawn to avoid punishment from Security Forces, or respawn as the same character if given a permanent confinement sentence.
-	-2.8. Exploits, abusing bugs, cheating, power-gaming, and other extremely lame behavior are forbidden.
+-2.1. Don't be a dick nor harass other players.
+-2.2. Do not evade bans.
+-2.3. Don't incite hatred based on ethnicity or other individual characteristic
+-2.4. Do not attempt to cause lag to the server.
+-2.5. Do not grief or cause any damage to the main station, unless you have a very good roleplay reason.
+-2.6. Do not leave the server to avoid investigation from the whitelisted/central command.
+-2.7. Do not respawn to avoid punishment from Security Forces, or respawn as the same character if given a permanent confinement sentence.
+-2.8. Exploits, abusing bugs, cheating, power-gaming, and other extremely lame behavior are forbidden.
 
 [color=#a4885c]3.[/color] Do not use information gained outside of in-character means, and do not say In Character (IC) things in the Local Out Of Character (LOOC) chat channel.
-	- I.e. metagaming. This especially refers to communication between players outside of the game via things like Discord, known as meta-comms. Characters are otherwise allowed to know everything about in-game mechanics or antagonists, as well as keep persistent friendships and relationships with other characters when not for the purpose of unfair advantage by teaming up together for little IC reason.
+- I.e. metagaming. This especially refers to communication between players outside of the game via things like Discord, known as meta-comms. Characters are otherwise allowed to know everything about in-game mechanics or antagonists, as well as keep persistent friendships and relationships with other characters when not for the purpose of unfair advantage by teaming up together for little IC reason.
 
 [color=#a4885c]4.[/color] After cloning, respawning, or taking a ghost role, you must follow the new life rule.
-	-4.1. If cloned, resuscitated, or respawned, you don't have amnesia, but you can only recall vague details of who or what had killed you.
-	-4.2. If taking a ghost role, you have no memories from any past lives for the duration of playing as a ghost role.
-	-4.3. A 15 minute non-aggression period is required after respawning, so you can’t immediately get in a ship and try to go kill whoever killed you.
-	-4.4. Don't act on anything you saw while ghosted.
+-4.1. If cloned, resuscitated, or respawned, you don't have amnesia, but you can only recall vague details of who or what had killed you.
+-4.2. If taking a ghost role, you have no memories from any past lives for the duration of playing as a ghost role.
+-4.3. A 15 minute non-aggression period is required after respawning, so you can’t immediately get in a ship and try to go kill whoever killed you.
+-4.4. Don't act on anything you saw while ghosted.
 
 [color=#a4885c]5.[/color] Follow Chat Guidelines
-	-5.1. Only speak in English.
-	-5.2. Do not spam.
-	-5.3. Do not advertise.
-
+-5.1. Only speak in English.
+-5.2. Do not spam.
+-5.3. Do not advertise.
 
 [color=#a4885c]6.[/color] Follow Roleplay Guidelines
-	-6.1. Your IC name must be realistic. Avoid joke names and names of fictional or real people, or names playing off of them (e.g. Saul Badman.) Additionally, avoid using the character names of other well-known players, you may not impersonate other players this way. (e.g. Bill Carson.) If your species has a naming convention, be sure to generally follow it.
-	-6.2. Meta-friending and meta-grudging IS allowed. Please try to treat others therefore as you want to be treated.
+-6.1. Your IC name must be realistic. Avoid joke names and names of fictional or real people, or names playing off of them (e.g. Saul Badman.) Additionally, avoid using the character names of other well-known players, you may not impersonate other players this way. (e.g. Bill Carson.) If your species has a naming convention, be sure to generally follow it.
+-6.2. Meta-friending and meta-grudging IS allowed. Please try to treat others therefore as you want to be treated.
 
 [color=#a4885c]7.[/color] Follow Antagonist Guidelines
-	-7.1. Non-pirates may not assist or work with pirate crews, examples are such as watching mass scanners and tipping them off who to attack, pretending to be hostages, or knowingly funding the pirates for equipment/ships.
+-7.1. Non-pirates may not assist or work with pirate crews, examples are such as watching mass scanners and tipping them off who to attack, pretending to be hostages, or knowingly funding the pirates for equipment/ships.
 
 [color=#a4885c]8.[/color] Security Forces and Station Staff roles are held to a higher standard (Medium RP) of roleplay and are strictly non-antagonists.
-	-7.2.Security Forces roleplaying as ‘bad cops’ and intentionally violating space law is forbidden. Space Law is not optional for these roles, and strong knowledge is required before taking a security position.
-	-7.3. Assets seized from criminals may only be used to make victims whole and to pay for any fines under the law. Any excess financials received from the sale of criminal assets is to be returned to their original owners, and are not to be plundered or extorted by security forces. This is a strict zero-tolerance policy.
-	-7.4. All players that are hired on as crew to the station as security or service staff, or through other direct jobs working for paychecks from the station, are considered non-antags and official Nanotrasen employees. Engaging in any hostile antagonistic activities, or abuse of the equipment provided while working in these roles, is strictly prohibited.
+-8.1. Security Forces roleplaying as ‘bad cops’ and intentionally violating space law is forbidden. Space Law is not optional for these roles, and strong knowledge is required before taking a security position.
+-8.2. Assets seized from criminals may only be used to make victims whole and to pay for any fines under the law. Any excess financials received from the sale of criminal assets is to be returned to their original owners, and are not to be plundered or extorted by security forces. This is a strict zero-tolerance policy.
+-8.3. All players that are hired on as crew to the station as security or service staff, or through other direct jobs working for paychecks from the station, are considered non-antags and official Nanotrasen employees. Engaging in any hostile antagonistic activities, or abuse of the equipment provided while working in these roles, is strictly prohibited.
 
 [color=#a4885c]9.[/color] Sector Command roles such as Sector Administrator and Sector Commander are vital to the operation of the sector and are held to a much higher degree of roleplay and role handling.
-	-9.1. Sector Command is expected and [color=#ff0000]required[/color] to maintain pay for their respective staff as a part of their job.
+-9.1. Sector Command is expected and [color=#ff0000]required[/color] to maintain pay for their respective staff as a part of their job.
 
 Payroll should follow the following payroll table:
 
 Minimum salary: 15,000 an hour for station crew.
 Security salary: 20,000 an hour for security staff.
 Administration salary: 25,000 for administrative jobs (Traffic Police and Security Lieutenant)
-Low Command salary: 30,000 for low command jobs (Sector Administrator and Sector Commander)
+The whitelisted salary: 30,000 for the whitelisted jobs (Sector Administrator and Sector Commander)
 
-Low Command may pay bonuses to the employees on payroll from the first three categories (Minimum, Security & Administration).
+The whitelisted may pay bonuses to the employees on payroll from the first three categories (Minimum, Security & Administration).
 The bonus should never exceed more than 50% of the base salary. Maximum bonus tables below:
 
 Minimum salary bonus: 7,500 an hour
 Security salary bonus: 10,000 an hour
 Adminisration salary bonus: 12,500 an hour
 
-Low Command can not pay bonuses to themselves.
+The whitelisted cannot pay bonuses to themselves.
 
-	-9.2. Low command roles have higher access to station resources than should be allowed for most crew members. As such, if you must ever end your shift early, always bring your ID with you, and always return to cryosleep so that your access cannot be stolen and the station funds embezzled. If for any reason you cannot (disconnect, crash, power outage, etc.) Please ping the central command in Discord and we will handle your in-game character accordingly.
-	-9.3. Sector Command is permitted and expected to issue and enforce any docking fines related to loitering in the terminal for shuttles that have been idle for more than 15 minutes in the station docks without a valid reason, up to and including forced eviction of shuttles.  Fines collected in this way are permitted to be used as payroll or the acquisition of station supplies. Time spent docked and waiting at the station is to be kept at a minimum.
-	-9.4. You may not tax, lease, rent, or otherwise reserve the free and fair usage of station resources to the detriment of the public. That includes but not limited to, charging docking fees, basic cloning services, vending access, and moving station resources behind access locked doors to restrict access, etc.
-
+-9.2. The whitelisted roles have higher access to station resources than should be allowed for most crew members. As such, if you must ever end your shift early, always bring your ID with you, and always return to cryosleep so that your access cannot be stolen and the station funds embezzled. If for any reason you cannot (disconnect, crash, power outage, etc.) Please ping the central command in Discord and we will handle your in-game character accordingly.
+-9.3. Sector Command is permitted and expected to issue and enforce any docking fines related to loitering in the terminal for shuttles that have been idle for more than 15 minutes in the station docks without a valid reason, up to and including forced eviction of shuttles. Fines collected in this way are permitted to be used as payroll or the acquisition of station supplies. Time spent docked and waiting at the station is to be kept at a minimum.
+-9.4. You may not tax, lease, rent, or otherwise reserve the free and fair usage of station resources to the detriment of the public. That includes but not limited to, charging docking fees, basic cloning services, vending access, and moving station resources behind access locked doors to restrict access, etc.
 [color=#a4885c]10.[/color] Follow Escalation Guidelines
-	-10.1. Antagonistic ghost roles, and pest ghost roles like mice are always fair game for attack. Don't grief nanotrasen-aligned ghost roles like familiars, drones, or pets without provocation.
-	-10.2. Do not attack another player without a legitimate, explainable roleplay reason that could be applied in a similar, real-life scenario. A fistfight does not suddenly escalate into a gunfight.
-	-10.3. If a fight results in someone being critically injured or killed, seek medical help for them.
-	-10.4. If at any point combat is disengaged and both parties leave the area, you cannot skip escalation and plunge back into a fight. What’s done is done.
-	-10.5. Security Forces are expected to resolve situations with non-lethal force and to de-escalate IC confrontation except in cases where there is a reasonable chance of harm/death.
+-10.1. Antagonistic ghost roles, and pest ghost roles like mice are always fair game for attack. Don't grief nanotrasen-aligned ghost roles like familiars, drones, or pets without provocation.
+-10.2. Do not attack another player without a legitimate, explainable roleplay reason that could be applied in a similar, real-life scenario. A fistfight does not suddenly escalate into a gunfight.
+-10.3. If a fight results in someone being critically injured or killed, seek medical help for them.
+-10.4. If at any point combat is disengaged and both parties leave the area, you cannot skip escalation and plunge back into a fight. What’s done is done.
+-10.5. Security Forces are expected to resolve situations with non-lethal force and to de-escalate IC confrontation except in cases where there is a reasonable chance of harm/death.
 
 [color=#a4885c]11.[/color] Pirate guideline
-	-11.1. To become a pirate, you MUST send a declaration of war against the Nanotrasen forces on Pax Astralis via fax to the Sector Commander and Administrator. You must also announce declaration of war over general comms.
-	-11.2. After declaration and faxing is complete, you need to wait 10 minutes before initiating first act of piracy or attack.
-	-11.3. Pirate actions may not begin on the Pax Astralis. This includes stealing any ships or attacking anyone in Pax Astralis or ships within the range of 200 meters.
-	-11.4. Pax Astralis is a general no-go zone: You will be within range of CentComm's blue space artillery if you board or stay near Pax Astralis!
-	-11.5. Pirate crews must always be undermanned compared to server, at maximum 1:8 ratio is allowed (so for example if there is 40 players, 5 pirates are allowed). You are responsible of calculating this!
-	-11.6. Non-hostile vessels that surrender: cannot be killed, left stranded, completely bankrupt, or otherwise. The safety of non-hostile merchant vessels is to be guaranteed by all parties. All vessels being boarded must first attempt to negotiate before any hostile actions may take place.
+-11.1. To become a pirate, you MUST send a declaration of war against the Nanotrasen forces on Pax Astralis via fax to the Sector Commander and Administrator. You must also announce declaration of war over general comms.
+-11.2. After declaration and faxing is complete, you need to wait 10 minutes before initiating the first act of piracy or attack.
+-11.3. Pirate actions may not begin on the Pax Astralis. This includes stealing any ships or attacking anyone in Pax Astralis or ships within the range of 200 meters.
+-11.4. Pax Astralis is a general no-go zone: You will be within range of CentComm's blue space artillery if you board or stay near Pax Astralis!
+-11.5. Pirate crews must always be undermanned compared to the server, at maximum 1:8 ratio is allowed (so for example if there are 40 players, 5 pirates are allowed). You are responsible for calculating this!
+-11.6. Non-hostile vessels that surrender: cannot be killed, left stranded, completely bankrupt, or otherwise. The safety of non-hostile merchant vessels is to be guaranteed by all parties. All vessels being boarded must first attempt to negotiate before any hostile actions may take place.
+
+Beta Sector Rules (High Risk-High Reward Zone)
+
+In the Beta Sector, PvP is allowed, and normal relevant rules like 7, 8, 10, and 11 are not in effect, but other rules are. It is meant to be a place for people enjoying high risk-high reward gameplay.
+

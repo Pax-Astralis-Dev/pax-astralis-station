@@ -3324,3 +3324,11 @@ Entries:
     message: Fixed door on Finder ship from CommandDoor to CaptainDoor.
   id: 4822
   time: '2024-07-17T15:57:54.0000000+00:00'
+- author: Gry
+  changes:
+  - type: Add
+    message: New science meta-station vessel Discovery added. This observation station is reinforced by plastitanium walls, prepared for large-scale anomaly and artifact extractions.
+  - type: Tweak
+    message: Rules divided in to Alpha Sector rules and Beta Sector rules. Beta Sector is for PvP and high-risk gameplay, therefore rules 7, 8, 10, and 11 are not in effect there.
+  id: 4823
+  time: '2024-07-19T10:45:54.0000000+00:00'
