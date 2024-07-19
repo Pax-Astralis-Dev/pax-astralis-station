@@ -1,7 +1,7 @@
 - type: soundCollection
   id: Paracusia
   files:
-  #- /Audio/Effects/adminhelp.ogg
+  - /Audio/Effects/adminhelp.ogg
   #- /Audio/Machines/Nuke/nuke_alarm.ogg
   #- /Audio/Misc/emergency_meeting.ogg
   - /Audio/Effects/countdown.ogg

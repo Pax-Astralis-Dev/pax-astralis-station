@@ -107,31 +107,31 @@
   # - type: RandomSpawnRule
     # prototype: MobRevenant
 
-- type: entity
-  id: FalseAlarm
-  parent: BaseGameRule
-  noSpawn: true
-  components:
-  - type: StationEvent
-    weight: 15
-    duration: 1
-  - type: FalseAlarmRule
+#- type: entity
+ # id: FalseAlarm
+  #parent: BaseGameRule
+  #noSpawn: true
+  #components:
+  #- type: StationEvent
+   # weight: 15
+    #duration: 1
+  #- type: FalseAlarmRule
 
-- type: entity
-  id: GasLeak
-  parent: BaseGameRule
-  noSpawn: true
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-gas-leak-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    endAnnouncement: station-event-gas-leak-end-announcement
-    earliestStart: 10
-    minimumPlayers: 5
-    weight: 5
-    startDelay: 20
-  - type: GasLeakRule
+#- type: entity
+ # id: GasLeak
+  #parent: BaseGameRule
+  #noSpawn: true
+  #components:
+  #- type: StationEvent
+   # startAnnouncement: station-event-gas-leak-start-announcement
+    #startAudio:
+     # path: /Audio/Announcements/attention.ogg
+    #endAnnouncement: station-event-gas-leak-end-announcement
+    #earliestStart: 10
+    #minimumPlayers: 5
+    #weight: 5
+    #startDelay: 20
+  #- type: GasLeakRule
 
 # - type: entity
   # id: KudzuGrowth
@@ -189,35 +189,35 @@
     # - id: SpawnPointGhostRatKing
       # prob: 0.005
 
-- type: entity
-  id: PowerGridCheck
-  parent: BaseGameRule
-  noSpawn: true
-  components:
-  - type: StationEvent
-    weight: 10
-    startAnnouncement: station-event-power-grid-check-start-announcement
-    endAnnouncement: station-event-power-grid-check-end-announcement
-    startAudio:
-      path: /Audio/Announcements/power_off.ogg
-      params:
-       volume: -4
-    startDelay: 12
-    duration: 60
-    maxDuration: 60 # Frontier 120<60
-  - type: PowerGridCheckRule
+#- type: entity
+#  id: PowerGridCheck
+#  parent: BaseGameRule
+#  noSpawn: true
+ # components:
+  #- type: StationEvent
+   # weight: 10
+    #startAnnouncement: station-event-power-grid-check-start-announcement
+    #endAnnouncement: station-event-power-grid-check-end-announcement
+    #startAudio:
+     # path: /Audio/Announcements/power_off.ogg
+      #params:
+       #volume: -4
+    #startDelay: 12
+    #duration: 60
+    #maxDuration: 60 # Frontier 120<60
+  #- type: PowerGridCheckRule
 
-- type: entity
-  id: RandomSentience
-  parent: BaseGameRule
-  noSpawn: true
-  components:
-  - type: StationEvent
-    weight: 10
-    duration: 1
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-  - type: RandomSentienceRule
+#- type: entity
+ # id: RandomSentience
+  #parent: BaseGameRule
+  #noSpawn: true
+  #components:
+  #- type: StationEvent
+   # weight: 10
+   # duration: 1
+   # startAudio:
+    #  path: /Audio/Announcements/attention.ogg
+ # - type: RandomSentienceRule
 
 - type: entity
   parent: BaseGameRule
@@ -358,21 +358,21 @@
 #    duration: 1
 #  - type: LoneOpsSpawnRule
 
-- type: entity
-  id: MassHallucinations
-  parent: BaseGameRule
-  noSpawn: true
-  components:
-  - type: StationEvent
-    weight: 10
-    duration: 150
-    maxDuration: 300
-  - type: MassHallucinationsRule
-    minTimeBetweenIncidents: 0.1
-    maxTimeBetweenIncidents: 300
-    maxSoundDistance: 7
-    sounds:
-      collection: Paracusia
+#- type: entity
+ # id: MassHallucinations
+  #parent: BaseGameRule
+  #noSpawn: true
+  #components:
+  #- type: StationEvent
+   # weight: 10
+    #duration: 150
+    #maxDuration: 300
+  #- type: MassHallucinationsRule
+   # minTimeBetweenIncidents: 0.1
+    #maxTimeBetweenIncidents: 300
+    #maxSoundDistance: 7
+    #sounds:
+    #  collection: Paracusia
 
 # - type: entity
   # id: ImmovableRodSpawn
@@ -389,17 +389,17 @@
     # minimumPlayers: 20
   # - type: ImmovableRodRule
 
-- type: entity
-  noSpawn: true
-  parent: BaseGameRule
-  id: IonStorm
-  components:
-  - type: StationEvent
-    weight: 5
-    earliestStart: 20
-    reoccurrenceDelay: 60
-    startAnnouncement: station-event-ion-storm-start-announcement
-    startAudio:
-      path: /Audio/Announcements/ion_storm.ogg
-    duration: 1
-  - type: IonStormRule
+#- type: entity
+ # noSpawn: true
+  #parent: BaseGameRule
+  #id: IonStorm
+  #components:
+  #- type: StationEvent
+   # weight: 5
+   # earliestStart: 20
+   # reoccurrenceDelay: 60
+   # startAnnouncement: station-event-ion-storm-start-announcement
+   # startAudio:
+    #  path: /Audio/Announcements/ion_storm.ogg
+    #duration: 1
+  #- type: IonStormRule

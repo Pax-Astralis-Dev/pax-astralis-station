@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: gry-man
+# Discord: Gry
+
+# Maintainer Info
+# GitHub: https://github.com/gry-man
+# Discord: https://discord.gg/QZa6SnAy
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Discovery
+  name: NC Discovery
+  description: A science meta-station reinforced by plastitanium walls, meant for dangerous anomaly and artifact research on large scale in deep space.
+  price: 140000
+  category: Medium
+  group: Civilian
+  shuttlePath: /Maps/_PAX/Shuttles/discovery.yml
+
+- type: gameMap
+  id: Discovery
+  mapName: 'NC Discovery'
+  mapPath: /Maps/_PAX/Shuttles/discovery.yml
+  minPlayers: 0
+  stations:
+    Discovery:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Discovery {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            Chef: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
+            Janitor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            StationEngineer: [ 0, 0 ]
+            Scientist: [ 0, 0 ]
+            ResearchDirector: [ 0, 0 ]
+            Bartender: [ 0, 0 ]
+            SalvageSpecialist: [ 0, 0 ]
