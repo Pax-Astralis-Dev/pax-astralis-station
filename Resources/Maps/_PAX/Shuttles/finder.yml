@@ -746,7 +746,7 @@ entities:
     - pos: 7.5,0.5
       parent: 1
       type: Transform
-    - secondsUntilStateChange: -121.61618
+    - secondsUntilStateChange: -1213.4456
       state: Opening
       type: Door
 - proto: AirlockExternalGlassShuttleLocked
@@ -1897,6 +1897,38 @@ entities:
       pos: 3.5,4.5
       parent: 1
       type: Transform
+- proto: CargoPallet
+  entities:
+  - uid: 116
+    components:
+    - pos: -5.5,-0.5
+      parent: 1
+      type: Transform
+  - uid: 536
+    components:
+    - pos: -3.5,-1.5
+      parent: 1
+      type: Transform
+  - uid: 537
+    components:
+    - pos: -4.5,-1.5
+      parent: 1
+      type: Transform
+  - uid: 538
+    components:
+    - pos: -5.5,-1.5
+      parent: 1
+      type: Transform
+  - uid: 539
+    components:
+    - pos: -3.5,-0.5
+      parent: 1
+      type: Transform
+  - uid: 540
+    components:
+    - pos: -4.5,-0.5
+      parent: 1
+      type: Transform
 - proto: Catwalk
   entities:
   - uid: 32
@@ -1907,11 +1939,6 @@ entities:
   - uid: 36
     components:
     - pos: 3.5,3.5
-      parent: 1
-      type: Transform
-  - uid: 116
-    components:
-    - pos: -3.5,-1.5
       parent: 1
       type: Transform
   - uid: 199
@@ -2158,31 +2185,6 @@ entities:
   - uid: 515
     components:
     - pos: 5.5,10.5
-      parent: 1
-      type: Transform
-  - uid: 536
-    components:
-    - pos: -3.5,-0.5
-      parent: 1
-      type: Transform
-  - uid: 537
-    components:
-    - pos: -4.5,-0.5
-      parent: 1
-      type: Transform
-  - uid: 538
-    components:
-    - pos: -5.5,-0.5
-      parent: 1
-      type: Transform
-  - uid: 539
-    components:
-    - pos: -5.5,-1.5
-      parent: 1
-      type: Transform
-  - uid: 540
-    components:
-    - pos: -4.5,-1.5
       parent: 1
       type: Transform
   - uid: 568

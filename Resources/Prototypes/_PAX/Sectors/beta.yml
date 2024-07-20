@@ -63,15 +63,6 @@
       b: 3
     path: /Maps/_NF/POI/cove.yml
   - type: sectorOutpost
-    id: 7
-    location:
-      distance: 2000
-    color:
-      r: 1
-      g: 2
-      b: 3
-    path: Maps/_NF/POI/grifty.yml
-  - type: sectorOutpost
     id: 5
     location:
       distance: 1500
@@ -81,7 +72,7 @@
       b: 3
     path: /Maps/_NF/POI/anomalouslab.yml
   - type: sectorOutpost
-    id: 8
+    id: 9
     location:
       distance: 2500
     color:
@@ -89,3 +80,12 @@
       g: 2
       b: 3
     path: /Maps/_PAX/POI/invictus.yml
+  - type: sectorOutpost
+    id: 10
+    location:
+      distance: 2500
+    color:
+      r: 1
+      g: 2
+      b: 3
+    path: /Maps/_PAX/POI/fedasteroid.yml

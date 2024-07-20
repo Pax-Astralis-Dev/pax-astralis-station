@@ -673,7 +673,8 @@ entities:
           -2,1:
             0: 65535
           -2,2:
-            0: 65535
+            0: 65407
+            1: 128
           -2,3:
             0: 65535
           -1,0:
@@ -702,6 +703,21 @@ entities:
           moles:
           - 21.824879
           - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.14996
+          moles:
+          - 20.078888
+          - 75.53487
           - 0
           - 0
           - 0
@@ -902,7 +918,7 @@ entities:
     - pos: 1.5,3.5
       parent: 1
       type: Transform
-    - secondsUntilStateChange: -1497.1866
+    - secondsUntilStateChange: -1656.1072
       state: Opening
       type: Door
     - links:
@@ -2070,6 +2086,24 @@ entities:
     - pos: -4.5,9.5
       parent: 1
       type: Transform
+    - air:
+        volume: 200
+        immutable: False
+        temperature: 293.1496
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+      type: EntityStorage
 - proto: CrateFoodDinnerware
   entities:
   - uid: 84
@@ -4412,7 +4446,7 @@ entities:
       parent: 1
       type: Transform
     - linkedPorts:
-        331:
+        invalid:
         - On: Open
         - Off: Close
       type: DeviceLinkSource
@@ -5003,21 +5037,16 @@ entities:
       pos: -8.5,9.5
       parent: 1
       type: Transform
-  - uid: 340
-    components:
-    - pos: -1.5,11.5
-      parent: 1
-      type: Transform
-- proto: WindoorSecureCommandLocked
-  entities:
   - uid: 331
     components:
     - pos: -4.5,13.5
       parent: 1
       type: Transform
-    - links:
-      - 589
-      type: DeviceLinkSink
+  - uid: 340
+    components:
+    - pos: -1.5,11.5
+      parent: 1
+      type: Transform
 - proto: WindowReinforcedDirectional
   entities:
   - uid: 119
