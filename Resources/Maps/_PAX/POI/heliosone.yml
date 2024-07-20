@@ -20169,23 +20169,13 @@ entities:
     - pos: 76.5,-27.5
       parent: 2
       type: Transform
-- proto: ComputerShipyardExpedition
+- proto: VendingMachineAmmo
   entities:
   - uid: 240
     components:
-    - pos: -0.5,4.5
+    - pos: -8.5,-8.5
       parent: 2
       type: Transform
-    - containers:
-        ShipyardConsole-targetId: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-      type: ContainerContainer
   - uid: 241
     components:
     - pos: 1.5,4.5

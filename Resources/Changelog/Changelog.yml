@@ -3332,3 +3332,13 @@ Entries:
     message: Rules divided in to Alpha Sector rules and Beta Sector rules. Beta Sector is for PvP and high-risk gameplay, therefore rules 7, 8, 10, and 11 are not in effect there.
   id: 4823
   time: '2024-07-19T10:45:54.0000000+00:00'
+- author: Gry
+  changes:
+  - type: Add
+    message: New location Federation Asteroid has been added to Beta Sector.
+  - type: Tweak
+    message: Cargo pads added on Lancer and Finder, salvage rewards will come through now. Door fixed on Diner ship. Libernation gun vendor added to Helios One and it has been set to spawn closer to Oreo.
+  - type: Remove
+    message: Removed Grifty's Grub
+  id: 4824
+  time: '2024-07-20T18:30:54.0000000+00:00'

@@ -1,0 +1,11 @@
+- type: gameMap
+  id: Fedasteroid
+  mapName: 'Federation Asteroid'
+  mapPath: /Maps/_PAX/POI/fedasteroid.yml
+  minPlayers: 0
+  stations:
+    Fedasteroid:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Federation Asteroid'
