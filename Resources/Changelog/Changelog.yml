@@ -3342,3 +3342,11 @@ Entries:
     message: Removed Grifty's Grub
   id: 4824
   time: '2024-07-20T18:30:54.0000000+00:00'
+- author: Gry
+  changes:
+  - type: Add
+    message: FED Smuggler added to blackmarket shipyard.
+  - type: Tweak
+    message: Bwoink sound fixed and made less scary.
+  id: 4825
+  time: '2024-07-22T21:03:54.0000000+00:00'
