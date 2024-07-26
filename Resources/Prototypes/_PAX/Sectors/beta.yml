@@ -3,7 +3,7 @@
   name: Beta
   station:
     type: sectorStation
-    id: 1
+    id: 7
     location:
       distance: 0
     color:
@@ -14,7 +14,7 @@
     stationName: FTL Beacon
   outposts:
   - type: sectorOutpost
-    id: 1
+    id: 8
     location:
       position:
         x: 4500
@@ -25,7 +25,7 @@
       b: 3
     path: /Maps/_NF/POI/cargodepot.yml
   - type: sectorOutpost
-    id: 2
+    id: 9
     location:
       position:
         x: -4500
@@ -36,7 +36,7 @@
       b: 3
     path: /Maps/_NF/POI/cargodepot.yml
   - type: sectorOutpost
-    id: 3
+    id: 10
     location:
       distance: 3500
     color:
@@ -45,7 +45,7 @@
       b: 3
     path: /Maps/_NF/POI/lpbravo.yml
   - type: sectorOutpost
-    id: 4
+    id: 11
     location:
       distance: 2500
     color:
@@ -63,7 +63,7 @@
       b: 3
     path: /Maps/_NF/POI/cove.yml
   - type: sectorOutpost
-    id: 5
+    id: 12
     location:
       distance: 1500
     color:
@@ -72,7 +72,7 @@
       b: 3
     path: /Maps/_NF/POI/anomalouslab.yml
   - type: sectorOutpost
-    id: 9
+    id: 13
     location:
       distance: 2500
     color:
@@ -81,7 +81,7 @@
       b: 3
     path: /Maps/_PAX/POI/invictus.yml
   - type: sectorOutpost
-    id: 10
+    id: 14
     location:
       distance: 2500
     color:
