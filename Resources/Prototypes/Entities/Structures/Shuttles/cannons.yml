@@ -349,7 +349,7 @@
           acts: ["Destruction"]
   - type: Gun
     projectileSpeed: 20
-    fireRate: 2
+    fireRate: 1
     selectedMode: SemiAuto
     angleDecay: 45
     minAngle: 5
@@ -361,7 +361,7 @@
       params:
         variation: 0.12
   - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 2
+    rechargeCooldown: 1
     rechargeSound:
       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
       params:

@@ -3350,3 +3350,13 @@ Entries:
     message: Bwoink sound fixed and made less scary.
   id: 4825
   time: '2024-07-22T21:03:54.0000000+00:00'
+- author: Gry
+  changes:
+  - type: Add
+    message: NC Shuriken - shock salvage operation vessel has been added to expedition shipyard.
+  - type: Tweak
+    message: Matter Dematerializer shuttle gun is now 50% times faster, and recharges in half the previous time.
+  - type: Tweak
+    message: Default money characters start with increased from 25k to 30k.
+  id: 4826
+  time: '2024-07-22T16:23:54.0000000+00:00'
