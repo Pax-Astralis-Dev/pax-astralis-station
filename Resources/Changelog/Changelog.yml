@@ -3359,4 +3359,12 @@ Entries:
   - type: Tweak
     message: Default money characters start with increased from 25k to 30k.
   id: 4826
-  time: '2024-07-22T16:23:54.0000000+00:00'
+  time: '2024-07-25T16:23:54.0000000+00:00'
+- author: Gregend & Gry
+  changes:
+  - type: Add
+    message: Crawling added to the game.
+  - type: Tweak
+    message: Ship prices of Diamond and Blockhead tweaked to stop potential money exploit.
+  id: 4827
+  time: '2024-07-29T21:16:54.0000000+00:00'

@@ -12,7 +12,7 @@
   id: Blockhead
   name: NC Blockhead
   description: A small mining vessel designed to assist salvage operations.
-  price: 24000
+  price: 29000
   category: Small
   group: Civilian
   shuttlePath: /Maps/_PAX/Shuttles/blockhead.yml
