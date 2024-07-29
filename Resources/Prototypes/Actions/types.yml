@@ -22,6 +22,15 @@
     event: !type:ZombifySelfActionEvent
 
 - type: entity
+  id: ActionCrawl
+  name: Toggle Crawling
+  description: Crawl on the ground.
+  components:
+    - type: InstantAction
+      icon: Interface/Actions/crawl.png
+      event: !type:CrawlActionEvent
+
+- type: entity
   id: ActionToggleLight
   name: Toggle Light
   description: Turn the light on and off.
