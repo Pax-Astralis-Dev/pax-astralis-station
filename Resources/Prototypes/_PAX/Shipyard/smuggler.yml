@@ -9,25 +9,25 @@
 # Shuttle Notes:
 
 - type: vessel
-  id: Lancer
-  name: NC Lancer
-  description: Repurposed and expedition capable - Ship initially designed for capturing xeno-creatures.
-  price: 42000
+  id: Smuggler
+  name: FED Smuggler
+  description: Illegal federation government stealth vessel, comes with the best IFF and partially upgraded south thrusters - making the ship almost completely undetectable and fast.
+  price: 500000
   category: Small
-  group: Expedition
-  shuttlePath: /Maps/_PAX/Shuttles/lancer.yml
+  group: BlackMarket
+  shuttlePath: /Maps/_PAX/Shuttles/smuggler.yml
 
 - type: gameMap
-  id: Lancer
-  mapName: 'NC Lancer'
-  mapPath: /Maps/_PAX/Shuttles/lancer.yml
+  id: Smuggler
+  mapName: 'NC Smuggler'
+  mapPath: /Maps/_PAX/Shuttles/smuggler.yml
   minPlayers: 0
   stations:
-    Lancer:
-      stationProto: StandardFrontierExpeditionVessel
+    Smuggler:
+      stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Lancer {1}'
+          mapNameTemplate: 'Smuggler {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
@@ -35,6 +35,5 @@
           overflowJobs: []
           availableJobs:
             Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
-            MedicalDoctor: [ 0, 0 ]
+            StationEngineer: [ 0, 0 ]
             SalvageSpecialist: [ 0, 0 ]

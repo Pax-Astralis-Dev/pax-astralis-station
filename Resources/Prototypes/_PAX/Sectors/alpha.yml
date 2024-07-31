@@ -32,7 +32,7 @@
        b: 3
      path: /Maps/_NF/POI/caseyscasino.yml
    - type: sectorOutpost
-     id: 4
+     id: 3
      location:
        distance: 2000
      color:
@@ -41,7 +41,7 @@
        b: 3
      path: /Maps/_NF/POI/courthouse.yml
    - type: sectorOutpost
-     id: 6
+     id: 4
      location:
        distance: 1000
      color:
@@ -50,7 +50,7 @@
        b: 3
      path: Maps/_NF/POI/beacon.yml
    - type: sectorOutpost
-     id: 7
+     id: 5
      location:
        distance: 3000
      color:
@@ -59,7 +59,7 @@
        b: 3
      path: Maps/_PAX/POI/gregend.yml
    - type: sectorOutpost
-     id: 8
+     id: 6
      location:
        distance: 2500
      color:

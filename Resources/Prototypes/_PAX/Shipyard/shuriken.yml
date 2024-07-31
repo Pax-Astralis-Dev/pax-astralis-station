@@ -1,0 +1,38 @@
+# Author Info
+# GitHub: https://github.com/gry-man
+# Discord: https://discord.gg/txmQT9Ym
+
+# Maintainer Info
+# GitHub: https://github.com/gry-man
+# Discord: https://discord.gg/txmQT9Ym
+
+# Shuttle Notes:
+
+- type: vessel
+  id: Shuriken
+  name: NC Shuriken
+  description: Shuriken-shaped expedition and mining vessel designed for shock operations on planets. Comes with dematerializers on all 4 directions and super compact sick-bay with chemistry.
+  price: 103000
+  category: Small
+  group: Expedition
+  shuttlePath: /Maps/_PAX/Shuttles/shuriken.yml
+
+- type: gameMap
+  id: Shuriken
+  mapName: 'NC Shuriken'
+  mapPath: /Maps/_PAX/Shuttles/shuriken.yml
+  minPlayers: 0
+  stations:
+    Shuriken:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'NC Shuriken {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          overflowJobs: []
+          availableJobs:
+            Chemist: [ 0, 0 ]
+            SalvageSpecialist: [ 0, 0 ]
